@@ -1,0 +1,70 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block main %}
+<main>
+    <div class="container cart-container">
+        <a class="go-back" href="../product/product-page.html">
+            <img src="../../static/img/icons/arrow.png" alt="back arrow">
+        </a>
+        <h1 id="cartTitle">კალათი</h1>
+        <div class="cart-products">
+            <div class="cart-product-image">
+                <img id="cartImg" src="../../static/img/products/bunny-purple.jpg" alt="purple bunny toy">
+            </div>
+            <div class="cart-details">
+                <div>
+                    <span id="cartAmount">რაოდენობა:</span>
+                    <span id="amountNum">1</span>
+                </div>
+                <div>
+                    <span id="cartPrice">ღირებულება:</span>
+                    <span id="priceNum">35</span>
+                    <span>₾</span>
+                </div>
+                <div>
+                    <button id="remove">წაშალე</button>
+                </div>
+                <div class="total">
+                    <span id="total">ჯამი:</span>
+                    <span id="sum">35</span>
+                    <span>₾</span>
+                </div>
+            </div>
+        </div>
+        <form class="place-order" action="#">
+            <div class="sender-info">
+                <div class="sender-name">
+                    <label id="LSName" for="sname">შემკვეთის სახელი და გვარი</label>
+                    <input type="text" id="sname" name="sname" required>
+                </div>
+                <div class="sender-phone">
+                    <label id="LSPhone" for="phone">შემკვეთის ტელეფონი</label>
+                    <input type="number" id="phone" name="phone" required>
+                </div>
+                <div class="email">
+                    <label id="LSEmail" for="email">შემკვეთის ელ-ფოსტა</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="recipient-info">
+                <div class="recipient-name">
+                    <label id="LRName" for="rname">მიმღების სახელი და გვარი</label>
+                    <input type="text" id="rname" name="rname" required>
+                </div>
+                <div class="recipient-phone">
+                    <label id="LRPhone" for="rphone">მიმღების ტელეფონი</label>
+                    <input type="number" id="rphone" name="rphone" required>
+                </div>
+                <div class="delivery-address">
+                    <label id="LRAddress" for="adress">მიმღების მისამართი</label>
+                    <input type="text" id="adress" name="adress" required>
+                </div>
+            </div>
+            <div class="pay">
+                <button id="cartPay">გადახდა</button>
+            </div>
+        </form>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,127 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block main %}
+<main>
+    <div class="container">
+        <a class="go-back" href="{{ url_for('main.home') }}">
+            <img src="../../static/img/icons/arrow.png" alt="back arrow">
+        </a>
+        <h1 id="pageAnimals">სათამაშო ცხოველები</h1>
+        <section class="other-animals">
+            <ul>
+                <li class="product">
+                    <a id="product1" href="{{ url_for('product.view_product') }}">
+                        <img src="../../static/img/products/big%20leo.jpg" alt="big leo toy">
+                        <div class="product-info">
+                            <span>85₾</span>
+                            <button id="buyButton1">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product2" href="{{ url_for('product.view_product') }}">
+                        <img src="../../static/img/products/cat.jpg" alt="cat toy">
+                        <div class="product-info">
+                            <span>30₾</span>
+                            <button id="buyButton2">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product3" href="product-page.html">
+                        <img src="../../static/img/products/deer.jpg" alt="deer toy">
+                        <div class="product-info">
+                            <span>45₾</span>
+                            <button id="buyButton3">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product4" href="product-page.html">
+                        <img src="../../static/img/products/dino.jpg" alt="dinosaur toy">
+                        <div class="product-info">
+                            <span>45₾</span>
+                            <button id="buyButton4">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product5" href="product-page.html">
+                        <img src="../../static/img/products/giraffe.jpg" alt="giraffe toy">
+                        <div class="product-info">
+                            <span>40₾</span>
+                            <button id="buyButton5">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product6" href="product-page.html">
+                        <img src="../../static/img/products/heart-toy.jpg" alt="heart shape toy">
+                        <div class="product-info">
+                            <span>30₾</span>
+                            <button id="buyButton6">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product7" href="product-page.html">
+                        <img src="../../static/img/products/milky%20bear.jpg" alt="milky bear toy">
+                        <div class="product-info">
+                            <span>35₾</span>
+                            <button id="buyButton7">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product8" href="product-page.html">
+                        <img src="../../static/img/products/mocha%20bear.jpg" alt="mocha bear toy">
+                        <div class="product-info">
+                            <span>35₾</span>
+                            <button id="buyButton8">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product9" href="product-page.html">
+                        <img src="../../static/img/products/pink%20panther.jpg" alt="pink panther toy">
+                        <div class="product-info">
+                            <span>45₾</span>
+                            <button id="buyButton9">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product10" href="product-page.html">
+                        <img src="../../static/img/products/striped%20tiger.jpg" alt="striped tiger toy">
+                        <div class="product-info">
+                            <span>45₾</span>
+                            <button id="buyButton10">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product11" href="product-page.html">
+                        <img src="../../static/img/products/tiger.jpg" alt="big tiger toy">
+                        <div class="product-info">
+                            <span>85₾</span>
+                            <button id="buyButton11">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product12" href="product-page.html">
+                        <img src="../../static/img/products/yellow%20leo.jpg" alt="yellow leo toy">
+                        <div class="product-info">
+                            <span>40₾</span>
+                            <button id="buyButton12">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+    </div>
+</main>
+{% endblock %}
