@@ -1,0 +1,987 @@
+:root {
+    --main-font-en: 'Handlee';
+    --main-font-ge: 'alk-life';
+    --text-color: #545455;
+    --background-color: #fcecec;
+    --size-30: 30px;
+    --size-24: 24px;
+    --size-20: 20px;
+    --size-18: 18px;
+}
+
+@font-face {
+    font-family: 'Handlee';
+    src: url(../fonts/Handlee-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'alk-life';
+    src: url(../fonts/alk_life.otf);
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    position: relative;
+}
+
+.animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    padding: 20% 0;
+    display: flex;
+    justify-content: center;
+    animation: disappear 3600s;
+    visibility: collapse;
+}
+
+.animation h1 {
+    font-family: var(--main-font-en);
+    margin: 0;
+    font-size: 100px;
+    color: rgba(225,225,225, .01);
+    background-image: url(../img/backgrounds/bunnies-background.png);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    animation: move 10s ease-in-out;
+}
+    @keyframes move {
+      0%, 100% {
+        background-position: left top;
+      }
+      25%{
+        background-position: right bottom;
+       }
+      50% {
+        background-position: left bottom;
+      }
+      75% {
+        background-position: right top;
+      }
+  }
+
+  @keyframes disappear {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+    0.04% {
+        visibility: visible;
+        opacity: 1;
+    }
+    0.07% {
+        visibility: visible;
+        opacity: 0.5;
+    }
+    0.1% {
+        visibility: collapse;
+        opacity: 0;
+    }
+  }
+
+header {
+    width: 100%;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--text-color);
+}
+
+.logo {
+    max-width: 110px;
+    width: 15%;
+    align-self: center;
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+}
+
+.logo img {
+    height: 100%;
+    cursor: pointer;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+}
+
+.main-container {
+    padding: 1rem 5rem;
+}
+
+.container {
+    padding: 1rem 5rem;
+    position: relative;
+}
+
+.languages {
+    width: 7%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.languages svg {
+    height: 17.6px;
+    width: fit-content;
+}
+
+.icons {
+    width: 7%;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+.icons a {
+    height: 15%;
+    width: fit-content;
+}
+
+.icons svg {
+    cursor: pointer;
+    height: 100%;
+    width: fit-content;
+}
+
+.burger {
+    cursor: pointer;
+    display: none;
+}
+
+.burger div {
+    width: 18px;
+    height: 2.5px;
+    background: var(--text-color);
+    margin: 0.15rem 0;
+}
+
+.nav-links {
+    min-width: 15%;
+    list-style: none;
+    display: none;
+}
+
+.nav-links li {
+    width: 100%;
+    background-color: var(--text-color);
+    text-align: center;
+    padding: 0.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--background-color);
+    font-family: var(--main-font-ge);
+    font-size: var(--size-20);
+}
+
+.languages a {
+    font-family: var(--main-font-en);
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--size-18);
+}
+
+.categories {
+    width: 100%;
+    padding: 5% 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category {
+    max-width: 400px;
+    width: 45%;
+    min-width: 230px;
+    padding: 5%;
+    border: 1px solid var(--text-color);
+}
+
+.category img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.category h3 {
+    cursor: pointer;
+}
+
+.category a {
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+h3, h2 {
+    font-family: var(--main-font-ge);
+    font-size: var(--size-30);
+    align-self: center;
+    color: var(--text-color);
+}
+
+.pages {
+    width: 100%;
+    padding: 2% 15% 0;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.pages a {
+    font-family: var(--main-font-ge);
+    color: var(--text-color);
+    font-size: var(--size-20);
+    text-decoration: none;
+}
+
+.popular, .delivery, .contact {
+    width: 100%;
+    padding: 7% 0;
+}
+
+.popular ul {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.featured-toy {
+    display: inline-block;
+    width: 30%;
+}
+
+.product {
+    margin: 0 2%;
+    max-width: 300px;
+    min-width: 150px;
+    padding: 2%;
+    border: 2px solid var(--background-color);
+    transition: 0.2s linear;
+}
+
+.product:hover, .category:hover {
+    box-shadow: 10px 10px 10px #D3D3D3;
+    transition: 0.2s linear;
+}
+
+.product img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.product span, .product button {
+    font-family: var(--main-font-ge);
+    color: var(--text-color);
+    font-size: var(--size-20);
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 5px;
+    box-shadow: inset 0 0 1px var(--text-color);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--background-color);
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+  }
+
+.product a {
+    text-decoration: none;
+    display: block;
+    height: fit-content;
+}
+
+.product-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.product-info button {
+    cursor: pointer;
+    background-color: var(--background-color);
+    text-align: center;
+    border-radius: 10px;
+    width: 45%;
+}
+
+.product-info span {
+    align-self: center;
+}
+
+.delivery-info {
+    display: flex;
+    gap: 4rem;
+    padding: 30px 0;
+}
+
+.delivery-info svg {
+    width: 100px;
+}
+
+.delivery-info div {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.delivery-info span, .contact address {
+    font-family: var(--main-font-ge);
+    font-size: var(--size-18);
+    color: var(--text-color);
+}
+
+.contact address a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.contact {
+    width: 100%;
+}
+
+.contact h2 {
+    margin-bottom: 1rem;
+}
+
+.contact div {
+    padding: 1rem 0;
+}
+
+.contact-details {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.location-map {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.location-map a {
+    display: none;
+    text-align: center;
+    background-color: var(--background-color);
+    width: fit-content;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.location-map a button {
+    font-family: var(--main-font-ge);
+    font-size: var(--size-18);
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--background-color);
+    max-height: 70px;
+    border-top: 1px solid var(--text-color);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer a {
+    max-width: 31px;
+    width: 10%;
+}
+
+footer svg {
+    display: block;
+    width: 100%;
+    height: fit-content;
+}
+
+.bunnies, .other-animals {
+    padding: 5% 0;
+    text-align: center;
+}
+
+.bunnies ul, .other-animals ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    row-gap: 50px;
+}
+
+.container h1 {
+    font-family: var(--main-font-ge);
+    color: var(--text-color);
+    font-weight: 900;
+    font-size: var(--size-30);
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.product-details {
+    width: 100%;
+    padding: 5% 0;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.product-image {
+    min-width: 180px;
+    width: 35%;
+    height: fit-content;
+    padding: 1%;
+    border: 1px solid var(--text-color);
+    align-self: center;
+}
+
+.product-details img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.product-description {
+    width: 50%;
+    font-family: var(--main-font-ge);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: center;
+    align-content: center;
+}
+
+.product-description p {
+    width: 100%;
+    padding: 2% 5%;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    font-size: var(--size-20);
+}
+
+.buy {
+    height: 100px;
+    width: 100%;
+    padding: 2% 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    align-self: center;
+    font-size: var(--size-24);
+    font-weight: 600;
+}
+
+.buy div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy span {
+    align-self: center;
+}
+
+.product-description button {
+    padding: 3px 10px;
+    font-family: var(--main-font-ge);
+    font-size: var(--size-20);
+    color: var(--background-color);
+    background-color: var(--text-color);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.place-order {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    width: 100%;
+    padding: 3rem 0;
+}
+
+.place-order label {
+    font-family: var(--main-font-ge);
+    font-size: var(--size-20);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.sender-info div, .recipient-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.sender-info, .recipient-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 35%;
+}
+
+.place-order input {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-family: var(--main-font-ge);
+    font-size: var(--size-18);
+    color: var(--text-color);
+}
+
+.cart {
+    text-decoration: none;
+}
+
+.cart-products {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.cart-details, .cart-product-image {
+    width: 200px;
+    height: 200px;
+    padding: 0.5rem;
+    border: 1px solid var(--text-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--main-font-ge);
+    font-size: var(--size-18);
+    color: var(--text-color);
+    gap: 1rem;
+    font-weight: 600;
+}
+
+.cart-products img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.pay {
+    text-align: center;
+}
+
+.pay button {
+    background-color: var(--text-color);
+    padding: 1rem;
+    border-radius: 20px;
+    font-family: var(--main-font-ge);
+    font-size: var(--size-18);
+    color: var(--background-color);
+    cursor: pointer;
+}
+
+.cart-container {
+    padding-bottom: 7rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 200px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #FFFF;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid var(--text-color);
+    min-width: 538px;
+    width: 40%;
+    height: fit-content;
+  }
+
+.modal-content p {
+    font-family: var(--main-font-ge);
+    font-size: var(--size-24);
+    color: var(--text-color);
+}
+
+.modal-content a {
+    font-family: var(--main-font-ge);
+    font-size: var(--size-20);
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.modal-content div {
+    padding: 2rem 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+  .close {
+    color: var(--text-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cart div {
+    display: inline;
+}
+
+.counter {
+    font-family: var(--main-font-ge);
+    color: var(--text-color);
+    font-size: var(--size-18);
+    cursor: pointer;
+}
+
+.total span {
+    font-size: var(--size-20);
+    color: green;
+}
+
+.cart-products button {
+    font-family: var(--main-font-ge);
+    font-size: 12px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.go-back {
+    display: block;
+    width: 70px;
+    position: absolute;
+    top: 2.8rem;
+}
+
+.go-back img {
+    width: 100%;
+}
+
+@media (max-width: 1192px) {
+    h3, h2 {
+        font-size: calc(var(--size-30)*0.85) ;
+    }
+    .counter {
+        font-size: 14px;
+    }
+    .go-back {
+        width: 62px;
+    }
+}
+
+@media (max-width: 1035px) {
+    .container h1, h3, h2 {
+        font-size: calc(var(--size-30)*0.75) ;
+    }
+    .product span, .product button, .product-description p, .product-description button {
+        font-size: calc(var(--size-20)*0.85);
+    }
+    .delivery-info span, .contact address {
+        font-size: calc(var(--size-18)*0.85);
+    }
+    .product-description {
+        gap: 80px;
+    }
+    .buy {
+        height: 80px;
+        font-size: calc(var(--size-24)*0.85);
+    }
+    .go-back {
+        width: 55px;
+    }
+}
+
+@media (max-width: 980px) {
+    h3, h2 {
+        font-size: calc(var(--size-30)*0.7) ;
+    }
+    .languages a {
+        font-size: calc(var(--size-18)*0.7);
+    }
+    .icons a {
+        height: 11%;
+    }
+    .delivery-info svg {
+        display: none;
+    }
+    .delivery-info div {
+        width: 100%;
+    }
+    .animation h1 {
+        font-size: calc(100px*0.7);
+    }
+    .bunnies ul, .other-animals ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 912px) {
+    .container, .header-container, .main-container {
+        padding: 1rem 2rem;
+    }
+    .nav-links.nav-links__active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+    .location-map iframe {
+        display: none;
+    }
+    .location-map a {
+        display: block;
+    }
+    .location-map a button, .pay button {
+        font-size: calc(var(--size-18)*0.8) ;
+    }
+    .nav-links li a, .product-description p, .product-description button, .place-order label {
+        font-size: calc(var(--size-20)*0.8);
+    }
+    .buy {
+        font-size: calc(var(--size-24)*0.8);
+    }
+    .product-description {
+        gap: 60px;
+    }
+    .categories {
+        padding: 5% 10%;
+    }
+    .place-order {
+        flex-direction: column;
+        padding: 0;
+        gap: 3rem;
+        align-content: center;
+    }
+    .sender-info, .recipient-info {
+        width: 70%;
+    }
+    .cart-container {
+        padding-bottom: 3rem;
+    }
+}
+
+@media (max-width: 770px) {
+    .icons {
+        justify-content: space-between;
+    }
+    .icons a {
+        height: 13%;
+    }
+    .cart div {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+    .categories {
+        flex-direction: column;
+        align-content: center;        
+        gap: 2rem;
+    }
+    .category {
+        width: 70%;
+    }
+    .animation h1 {
+        font-size: calc(100px*0.6);
+    }
+    .animation {
+        padding: 25% 10%;;
+    }
+    .pages {
+        padding: 2% 1% 0;
+    }
+    .languages, .icons {
+        width: 10%;
+    }
+    .bunnies ul, .other-animals ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .product-description {
+        gap: 40px;
+    }
+    .buy {
+        height: 60px;
+        font-size: calc(var(--size-24)*0.7);
+    }
+    .product-description p, .product-description button {
+        font-size: calc(var(--size-20)*0.7);
+    }
+}
+
+@media (max-width: 590px) {
+    footer a {
+        width: 8%;
+    }
+    .languages a {
+        font-size: calc(var(--size-18)*0.7);
+    }
+    .animation {
+        padding: 28% 10%;;
+    }
+    .animation h1 {
+        font-size: calc(100px*0.55);
+    }
+    .pages a {
+        font-size: calc(var(--size-20)*0.8) ;
+    }
+    .product button {
+        width: 50%;
+    }
+    .contact-details {
+        gap: 2rem;
+    }
+    .languages, .icons {
+        width: 15%;
+    }
+    .bunnies ul, .other-animals ul {
+        grid-template-columns: 1fr;
+    }
+    .bunnies ul li, .other-animals ul li {
+        justify-self: center;
+    }
+    .product-details {
+        flex-direction: column;
+        gap: 40px;
+        align-content: center;
+    }
+    .product-description {
+        width: 80%;
+    }
+    .product-description p {
+        text-align: center;
+    }
+    .buy {
+        height: 70px;
+        padding: 2% 20%;
+    }
+    .sender-info, .recipient-info {
+        gap: 15px;
+    }
+    .cart-products div {
+        width: 150px;
+        height: 150px;
+    }
+    .modal-content {
+        min-width: 270px;
+        width: 80%;
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .modal-content div {
+        padding: 1rem 0 0;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .modal-content p {
+        font-size: 16px;
+    }
+    .modal-content a {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 465px) {
+    .container h1, h3, h2 {
+        font-size: calc(var(--size-30)*0.55) ;
+    }
+    .pages a {
+        font-size: calc(var(--size-20)*0.65) ;
+    }
+    .nav-links li a {
+        font-size: calc(var(--size-20)*0.55);
+    }
+    .animation h1 {
+        font-size: calc(100px*0.4);
+    }
+    .nav-links.nav-links__active {
+        gap: 5px;
+    }
+    .category {
+        min-width: 170px;
+    }
+    .product span, .product button, .buy, .place-order label {
+        font-size: calc(var(--size-20)*0.7); 
+    }
+    .delivery-info span, .contact address, .cart-products div {
+        font-size: calc(var(--size-18)*0.7);
+    }
+    .location-map a button {
+        font-size: calc(var(--size-18)*0.7) ;
+    }
+    .place-order div {
+        width: 100%;
+    }
+    .place-order input {
+        padding: 0.5rem 0;
+    }
+    .go-back {
+        width: 40px;
+    }
+}
+
+@media (max-width: 350px) {
+    .languages a {
+        font-size: calc(var(--size-18)*0.6);
+    }
+    .burger div {
+        height: 1.5px;
+        width: 15px;
+    }
+    .pages a {
+        font-size: calc(var(--size-20)*0.55) ;
+    }
+    .cart-products div {
+        width: 100px;
+        height: 100px;
+    }
+    .cart-products {
+        gap: 2%;
+    }
+
+}

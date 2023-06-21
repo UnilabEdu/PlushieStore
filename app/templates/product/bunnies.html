@@ -1,0 +1,119 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block main %}
+<main>
+    <div class="container">
+        <a class="go-back" href="../..">
+            <img src="../../static/img/icons/arrow.png" alt="back arrow">
+        </a>
+        <h1 id="pageBunnies">სათამაშო ბაჭიები</h1>
+        <section class="bunnies">
+            <ul>
+                <li class="product">
+                    <a id="product1" href="{{ url_for('product.view_product') }}">
+                        <img src="../../static/img/products/bunny%20light%20blue.jpg" alt="ligh blue bunny toy">
+                        <div class="product-info">
+                            <span>35₾</span>
+                            <button id="buyButton1">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product2" href="{{ url_for('product.view_product') }}">
+                        <img src="../../static/img/products/bunny%20with%20dress.jpg" alt="bunny toy with dress">
+                        <div class="product-info">
+                            <span>40₾</span>
+                            <button id="buyButton2">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product3" href="{{ url_for('product.view_product') }}">
+                        <img src="../../static/img/products/bunny%20with%20fur.jpg" alt="bunny toy with fur">
+                        <div class="product-info">
+                            <span>65₾</span>
+                            <button id="buyButton3">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product4" href="{{ url_for('product.view_product') }}">
+                        <img src="../../static/img/products/bunny%20with%20shorts.jpg" alt="bunny toy with shorts">
+                        <div class="product-info">
+                            <span>45₾</span>
+                            <button id="buyButton4">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product5" href="{{ url_for('product.view_product') }}">
+                        <img src="../../static/img/products/bunny-purple.jpg" alt="purple bunny toy">
+                        <div class="product-info">
+                            <span>35₾</span>
+                            <button id="buyButton5">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product6" href="{{ url_for('product.view_product') }}">
+                        <img src="../../static/img/products/dark%20red%20bunny.jpg" alt="dark red bunny">
+                        <div class="product-info">
+                            <span>35₾</span>
+                            <button id="buyButton6">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product7" href="{{ url_for('product.view_product') }}">
+                        <img src="../../static/img/products/light%20blue%20bunny%20with%20shorts.jpg"
+                             alt="ligh blue bunny with shorts">
+                        <div class="product-info">
+                            <span>45₾</span>
+                            <button id="buyButton7">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product8" href="product-page.html">
+                        <img src="../../static/img/products/orange-bunny.jpg" alt="orange bunny toy">
+                        <div class="product-info">
+                            <span>45₾</span>
+                            <button id="buyButton8">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product9" href="product-page.html">
+                        <img src="../../static/img/products/pink%20bunny%20with%20shorts.jpg" alt="pink bunny with shorts">
+                        <div class="product-info">
+                            <span>45₾</span>
+                            <button id="buyButton9">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product10" href="product-page.html">
+                        <img src="../../static/img/products/pink%20bunny.jpg" alt="pink bunny toy">
+                        <div class="product-info">
+                            <span>35₾</span>
+                            <button id="buyButton10">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+                <li class="product">
+                    <a id="product11" href="product-page.html">
+                        <img src="../../static/img/products/purple%20bunny%20with%20dress.jpg"
+                             alt="purple bunny with dress">
+                        <div class="product-info">
+                            <span>40₾</span>
+                            <button id="buyButton11">შეძენა</button>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+    </div>
+</main>
+{% endblock %}

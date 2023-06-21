@@ -1,0 +1,31 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block main %}
+<main>
+    <div class="container">
+        <a class="go-back" href="bunnies.html">
+            <img src="../../static/img/icons/arrow.png" alt="back arrow">
+        </a>
+        <h1 id="productTitle">იასამნისფერი სათამაშო ბაჭია</h1>
+        <div class="product-details">
+            <div class="product-image">
+                <img src="../../static/img/products/bunny-purple.jpg" alt="purple bunny toy">
+            </div>
+            <div class="product-description">
+                <p id="description">რბილი სათამაშო ბაჭია დამზადებულია მაღალი ხარისხის ანტიალერგიული ძაფებისაგან.
+                    სიმაღლე: 24სმ. შესაძლებელია გარეცხვა დელიკატურ რეჟიმზე. უსაფრთხოა ბავშვებისათვის</p>
+                <div class="buy">
+                    <span id="price">ღირებულება:</span>
+                    <div>
+                        <span>35₾</span>
+                        <a id="buyA">
+                            <button class="add-to-cart" id="buyButton">შეძენა</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

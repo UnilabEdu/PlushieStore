@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>final project</title>
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <meta name="description" content="Handmade soft animal toys made of harmless materials">
+    <meta name="keywords"
+          content="handmade toy, amigurumi toy, soft toy, soft bunny toy, handmade bunnies, harmless toys">
+    <meta name="robots" content="noindex,nofollow">
+    <meta property="og:url" content=""/>
+    <meta property="og:title" content="Handmade Toys"/>
+    <meta property="og:description" content="Handmade bunny toys on sale"/>
+    <meta property="og:image" content=""/>
+</head>
+<body>
+{% block animation %}
+{% endblock %}
+<header>
+    <nav>
+        <div class="container header-container">
+            <ul class="languages">
+                <li><a href="#ka" data-reload onclick="PageReload()">KA</a></li>
+                <li><a href="#eng" data-reload onclick="PageReload()">EN</a></li>
+            </ul>
+            <div class="logo" id="logoDiv">
+                <a id="logoLink" href="{{ url_for('main.home') }}" data-reload onclick="PageReload()">
+                    <img src="../static/img/amigurumi%20logo.svg" alt="logo">
+                </a>
+            </div>
+            <div class="icons">
+                <a class="cart" id="cartIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100"
+                         height="92" viewBox="0 0 100 92">
+                        <image width="100" height="92"
+                               xlink:href="data:img/png;base64,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"/>
+                    </svg>
+                    <div>
+                        (<span class="counter">0</span>)
+                    </div>
+                </a>
+                <div class="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('product.bunnies') }}">ბაჭიები</a></li>
+            <li><a href="{{ url_for('product.other_animals') }}">ცხოველები</a></li>
+            <li><a href="../../index.html#delivery-service">მიტანის სერვისი</a></li>
+            <li><a href="../../index.html#contact-us">კონტაქტი</a></li>
+        </ul>
+    </nav>
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="emptyCart">კალათა ცარიელია</p>
+            <div>
+                <a id="bunnyButton" href="{{ url_for('product.bunnies') }}">აირჩიე ბაჭია</a>
+                <a id="animalButton" href="{{ url_for('product.other_animals') }}">აირჩიე სხვა ცხოველი</a>
+            </div>
+        </div>
+    </div>
+</header>
+{% block main %}{% endblock %}
+<footer>
+    <div class="container social-icons">
+        <a href="https://www.facebook.com/amigurumitbilisi/">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="133" height="129"
+                 viewBox="0 0 133 129">
+                <image width="133" height="129"
+                       xlink:href="data:img/png;base64,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"/>
+            </svg>
+        </a>
+        <a href="https://www.instagram.com/amigurumi_tbilisi/">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="133" height="133"
+                 viewBox="0 0 133 133">
+                <image x="1" y="1" width="131" height="131"
+                       xlink:href="data:img/png;base64,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"/>
+            </svg>
+        </a>
+    </div>
+</footer>
+<script src="../static/js/translate-category-bunnies.js"></script>
+<script src="../static/js/modal.js"></script>
+<script src="../static/js/app.js"></script>
+</body>
+</html>
