@@ -50,8 +50,8 @@
             </div>
         </div>
         <ul class="nav-links">
-            <li><a href="{{ url_for('product.bunnies') }}">ბაჭიები</a></li>
-            <li><a href="{{ url_for('product.other_animals') }}">ცხოველები</a></li>
+            <li><a href="{{ url_for('product.bunnies', category_id=1) }}">ბაჭიები</a></li>
+            <li><a href="{{ url_for('product.bunnies', category_id=2) }}">ცხოველები</a></li>
             <li><a href="../../index.html#delivery-service">მიტანის სერვისი</a></li>
             <li><a href="../../index.html#contact-us">კონტაქტი</a></li>
         </ul>
@@ -61,8 +61,8 @@
             <span class="close">&times;</span>
             <p id="emptyCart">კალათა ცარიელია</p>
             <div>
-                <a id="bunnyButton" href="{{ url_for('product.bunnies') }}">აირჩიე ბაჭია</a>
-                <a id="animalButton" href="{{ url_for('product.other_animals') }}">აირჩიე სხვა ცხოველი</a>
+                <a id="bunnyButton" href="{{ url_for('product.bunnies', category_id=1) }}">აირჩიე ბაჭია</a>
+                <a id="animalButton" href="{{ url_for('product.bunnies', category_id=2) }}">აირჩიე სხვა ცხოველი</a>
             </div>
         </div>
     </div>
@@ -86,8 +86,8 @@
         </a>
     </div>
 </footer>
-<script src="../static/js/translate-category-bunnies.js"></script>
-<script src="../static/js/modal.js"></script>
-<script src="../static/js/app.js"></script>
+<script src="../../static/js/translate-category-bunnies.js"></script>
+<script src="../../static/js/modal.js"></script>
+<script src="../../static/js/app.js"></script>
 </body>
 </html>

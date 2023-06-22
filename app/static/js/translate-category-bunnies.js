@@ -62,7 +62,6 @@ if (window.location.hash) {
         productHash10.href = "../product/product-page.html#eng";
         productHash11.href = "../product/product-page.html#eng";
         HashBasketButton1.href = "templates/product/bunnies.html#eng"
-        HashBasketButton2.href = "templates/product/other-animals.html#eng"
     }
 }
 

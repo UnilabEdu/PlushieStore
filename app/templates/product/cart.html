@@ -12,14 +12,15 @@
             <div class="cart-product-image">
                 <img id="cartImg" src="../../static/img/products/bunny-purple.jpg" alt="purple bunny toy">
             </div>
+
             <div class="cart-details">
                 <div>
                     <span id="cartAmount">რაოდენობა:</span>
-                    <span id="amountNum">1</span>
+                    <span id="amountNum">{{ toy.stock }}</span>
                 </div>
                 <div>
                     <span id="cartPrice">ღირებულება:</span>
-                    <span id="priceNum">35</span>
+                    <span id="priceNum">{{ toy.price }}</span>
                     <span>₾</span>
                 </div>
                 <div>
@@ -27,38 +28,39 @@
                 </div>
                 <div class="total">
                     <span id="total">ჯამი:</span>
-                    <span id="sum">35</span>
+                    <span id="sum">{{ order.order_price }}</span>
                     <span>₾</span>
                 </div>
             </div>
         </div>
         <form class="place-order" action="#">
+            {{ form.hidden_tag() }}
             <div class="sender-info">
                 <div class="sender-name">
-                    <label id="LSName" for="sname">შემკვეთის სახელი და გვარი</label>
-                    <input type="text" id="sname" name="sname" required>
+                    {{ form.ord_fullname.label }}
+                    {{ form.ord_fullname }}
                 </div>
                 <div class="sender-phone">
-                    <label id="LSPhone" for="phone">შემკვეთის ტელეფონი</label>
-                    <input type="number" id="phone" name="phone" required>
+                    {{ form.ord_phone.label }}
+                    {{ form.ord_phone }}
                 </div>
                 <div class="email">
-                    <label id="LSEmail" for="email">შემკვეთის ელ-ფოსტა</label>
-                    <input type="text" id="email" name="email" required>
+                    {{ form.ord_email.label }}
+                    {{ form.ord_email }}
                 </div>
             </div>
             <div class="recipient-info">
                 <div class="recipient-name">
-                    <label id="LRName" for="rname">მიმღების სახელი და გვარი</label>
-                    <input type="text" id="rname" name="rname" required>
+                    {{ form.fullname.label }}
+                    {{ form.fullname }}
                 </div>
                 <div class="recipient-phone">
-                    <label id="LRPhone" for="rphone">მიმღების ტელეფონი</label>
-                    <input type="number" id="rphone" name="rphone" required>
+                    {{ form.phone.label }}
+                    {{ form.phone }}
                 </div>
                 <div class="delivery-address">
-                    <label id="LRAddress" for="adress">მიმღების მისამართი</label>
-                    <input type="text" id="adress" name="adress" required>
+                    {{ form.delivery_address.label }}
+                    {{ form.delivery_address }}
                 </div>
             </div>
             <div class="pay">
