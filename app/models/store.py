@@ -19,10 +19,13 @@ class Toy(db.Model, BaseModel):
     photo = db.Column(db.String, nullable=False)
     name_geo = db.Column(db.String, nullable=False)
     name_eng = db.Column(db.String, nullable=False)
+    desc_eng = db.Column(db.String, nullable=False)
+    desc_geo = db.Column(db.String, nullable=False)
     price = db.Column(db.Float, nullable=False)
     stock = db.Column(db.Integer, nullable=False)
     is_popular = db.Column(db.Boolean)
-    category_id = db.ForeignKey("toy_categories.id")
+    category_id = db.Column(db.ForeignKey("toy_categories.id"))
+    category = db.relationship("ToyCategory", uselist=True)
 
 
 class ToyCategory(db.Model, BaseModel):
@@ -33,6 +36,9 @@ class ToyCategory(db.Model, BaseModel):
     name_eng = db.Column(db.String, nullable=False)
     description_geo = db.Column(db.String, nullable=False)
     description_eng = db.Column(db.String, nullable=False)
+
+    def __repr__(self):
+        return self.name_geo
 
 
 class Order(db.Model, BaseModel):
@@ -47,7 +53,7 @@ class Order(db.Model, BaseModel):
     customer_address = db.Column(db.String)
     customer_note = db.Column(db.String)
     order_status = db.Column(db.String)
-    order_date = db.Column(db.String)
-    delivery_date = db.Column(db.String)
+    order_date = db.Column(db.DateTime)
+    delivery_date = db.Column(db.DateTime)
     admin_note = db.Column(db.String)
 

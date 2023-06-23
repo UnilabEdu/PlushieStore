@@ -15,90 +15,32 @@
             <li><a id="contactTab" href="#contact-us">კონტაქტი</a></li>
         </ul>
         <section class="categories">
+            {% for category in categories %}
             <div class="category">
-                <a id="firstCategory" href="{{ url_for('product.bunnies') }}" data-reload
+                <a id="firstCategory" href="{{ url_for('product.bunnies', category_id=category.id) }}" data-reload
                    onclick="PageReload()">
                     <img src="{{ url_for('static', filename='img/category covers/bunny-category-cover.jpg') }}"
                          alt="pink bunny toy">
-                    <h3 id="categoryBunnies">ბაჭიები</h3>
+                    <h3 id="categoryBunnies">{{ category.name_geo }}</h3>
                 </a>
             </div>
-            <div class="category">
-                <a id="secondCategory" href="{{ url_for('product.other_animals') }}" data-reload
-                   onclick="PageReload()">
-                    <img src="{{ url_for('static', filename='img/category covers/leo-category-cover.jpg') }}"
-                         alt="yellow leo toy">
-                    <h3 id="categoryAnimals">სხვა ცხოველები</h3>
-                </a>
-            </div>
+            {% endfor %}
         </section>
         <section class="popular" id="featured">
             <h2 id="popularToys">პოპულარული სათამაშოები</h2>
             <ul>
+                {% for toy in toys %}
                 <li class="product featured-toy">
                     <a id="featuredToy1" href="{{ url_for('product.view_product') }}">
-                        <img src="app/static/img/products/bunny-purple.jpg" alt="purple bunny toy">
+                        <img src="{{ toy.photo }}" alt="{{ toy.name_eng }}">
                         <div class="product-info">
-                            <span>35₾</span>
+                            <span>{{ toy.price }}₾</span>
                             <button id="buyButton1" type="submit">შეძენა</button>
                         </div>
                     </a>
                 </li>
-                <li class="product featured-toy">
-                    <a id="featuredToy2" href="{{ url_for('product.view_product') }}">
-                        <img src="app/static/img/products/pink panther.jpg" alt="pink panther toy">
-                        <div class="product-info">
-                            <span>45₾</span>
-                            <button id="buyButton2" type="submit">შეძენა</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="product featured-toy">
-                    <a id="featuredToy3" href="{{ url_for('product.view_product') }}">
-                        <img src="app/static/img/products/giraffe.jpg" alt="giraffe toy">
-                        <div class="product-info">
-                            <span>40₾</span>
-                            <button id="buyButton3" type="submit">შეძენა</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="product featured-toy">
-                    <a id="featuredToy4" href="{{ url_for('product.view_product') }}">
-                        <img src="app/static/img/products/light blue bunny with shorts.jpg"
-                             alt="light blue bunny with shorts">
-                        <div class="product-info">
-                            <span>45₾</span>
-                            <button id="buyButton4" type="submit">შეძენა</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="product featured-toy">
-                    <a id="featuredToy5" href="{{ url_for('product.view_product') }}">
-                        <img src="app/static/img/products/mocha bear.jpg" alt="mocha bear toy">
-                        <div class="product-info">
-                            <span>30₾</span>
-                            <button id="buyButton5" type="submit">შეძენა</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="product featured-toy">
-                    <a id="featuredToy6" href="{{ url_for('product.view_product') }}">
-                        <img src="app/static/img/products/bunny light blue.jpg" alt="light blue bunny">
-                        <div class="product-info">
-                            <span>35₾</span>
-                            <button id="buyButton6" type="submit">შეძენა</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="product featured-toy">
-                    <a id="featuredToy7" href="app/static/pages/product-page.html">
-                        <img src="app/static/img/products/dino.jpg" alt="dinosaur toy">
-                        <div class="product-info">
-                            <span>45₾</span>
-                            <button id="buyButton7" type="submit">შეძენა</button>
-                        </div>
-                    </a>
-                </li>
+                {% endfor %}
+
             </ul>
         </section>
         <section class="delivery" id="delivery-service">

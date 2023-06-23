@@ -66,7 +66,6 @@ if (window.location.hash) {
 
             findlink.href = "#eng";
             addhash1.href = "app/templates/product/bunnies.html#eng"
-            addhash2.href = "app/templates/product/other-animals.html#eng"
             HashFeatured1.href = "app/templates/product/product-page.html#eng"
             HashFeatured2.href = "app/templates/product/product-page.html#eng"
             HashFeatured3.href = "app/templates/product/product-page.html#eng"
@@ -75,7 +74,6 @@ if (window.location.hash) {
             HashFeatured6.href = "app/templates/product/product-page.html#eng"
             HashFeatured7.href = "app/templates/product/product-page.html#eng"
             HashBasketButton1.href = "app/templates/product/bunnies.html#eng"
-            HashBasketButton2.href = "app/templates/product/other-animals.html#eng"
     }
 }
 
