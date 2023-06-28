@@ -32,6 +32,7 @@ class ToyCategory(db.Model, BaseModel):
     __tablename__ = "toy_categories"
 
     id = db.Column(db.Integer, primary_key=True)
+    photo = db.Column(db.String, nullable=False)
     name_geo = db.Column(db.String, nullable=False)
     name_eng = db.Column(db.String, nullable=False)
     description_geo = db.Column(db.String, nullable=False)

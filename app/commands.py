@@ -3,6 +3,7 @@ from flask.cli import with_appcontext
 from app.extensions import db
 from app.models import User, Role, ToyCategory, Order, Toy
 import os
+from flask import url_for
 
 
 @click.command("init_db")
@@ -31,9 +32,11 @@ def populate_db():
     admin_user.create()
 
     # Toy Categorys
-    toy_category1 = ToyCategory(name_geo="ბაჭიები", name_eng="bunny", description_geo="ბაჭიები",
+    toy_category1 = ToyCategory(photo='bunny-category-cover.jpg', name_geo="ბაჭიები", name_eng="bunny",
+                                description_geo="ბაჭიები",
                                 description_eng="bunnys")
-    toy_category2 = ToyCategory(name_geo="სხვა ცხოველები", name_eng="other animals", description_geo="სხვა ცხოველები",
+    toy_category2 = ToyCategory(photo='leo-category-cover.jpg', name_geo="სხვა ცხოველები", name_eng="other animals",
+                                description_geo="სხვა ცხოველები",
                                 description_eng="other animals")
     toy_category1.create(commit=False)
     toy_category2.create(commit=False)

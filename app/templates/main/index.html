@@ -13,7 +13,7 @@
             {% for category in categories %}
             <div class="category">
                 <a href="{{ url_for('product.bunnies', category_id=category.id) }}">
-                    <img src="{{ url_for('static', filename='img/category covers/bunny-category-cover.jpg') }}"
+                    <img src="{{ url_for('static', filename='img/category covers/' + category.photo) }}"
                          alt="pink bunny toy">
                     <h3>{{ category.name_geo }}</h3>
                 </a>

@@ -67,4 +67,5 @@ class ToyCategoryView(SecureModelView):
         "description_eng": "აღწერა ინგლისურად"
     }
     column_list = ["name_geo", "name_eng"]
-    form_overrides = {"description_eng": TextAreaField, "description_geo": TextAreaField}
+    form_overrides = {"description_eng": TextAreaField, "description_geo": TextAreaField, 'photo': ImageUploadField}
+    form_args = {"photo": {"base_path": path.dirname("app/static/img/category covers/")}}
