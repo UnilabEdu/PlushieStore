@@ -22,10 +22,10 @@ class Toy(db.Model, BaseModel):
     desc_eng = db.Column(db.String, nullable=False)
     desc_geo = db.Column(db.String, nullable=False)
     price = db.Column(db.Float, nullable=False)
-    stock = db.Column(db.Integer, nullable=False)
+    stock = db.Column(db.Integer)
     is_popular = db.Column(db.Boolean)
     category_id = db.Column(db.ForeignKey("toy_categories.id"))
-    category = db.relationship("ToyCategory", uselist=True)
+    category = db.relationship("ToyCategory", uselist=False)
 
 
 class ToyCategory(db.Model, BaseModel):

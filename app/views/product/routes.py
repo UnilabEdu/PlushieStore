@@ -15,9 +15,9 @@ def bunnies(category_id):
     return render_template("bunnies.html", toys=toys, categorie=categorie)
 
 
-@product_blueprint.route("/product")
-def view_product():
-    toy = Toy.query.filter_by(id=1).first()
+@product_blueprint.route("/product/<int:id>")
+def view_product(id):
+    toy = Toy.query.filter_by(id=id).first()
     return render_template("product-page.html", toy=toy)
 
 

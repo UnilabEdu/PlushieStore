@@ -1,4 +1,4 @@
-var dataReload = document.querySelectorAll("[data-reload]")
+var dataReload = document.querySelectorAll("[data-reload")
 
 var findlink = document.getElementById("logoLink")
 var HashBasketButton1 = document.getElementById("bunnyButton")
@@ -27,12 +27,12 @@ if (window.location.hash) {
         animalButton.textContent = language.eng.basketButton2;
 
         const myfont = document.querySelectorAll("#animalButton, #bunnyButton, #emptyCart, #productTitle, #buyButton, #price, #description");
-        
+
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";
         });
 
-        findlink.href = "../../../index.html#eng";
+        findlink.href = "app/templates/main/index.html#eng";
     }
 }
 

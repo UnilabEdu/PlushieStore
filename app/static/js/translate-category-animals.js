@@ -1,4 +1,4 @@
-var dataReload = document.querySelectorAll("[data-reload]")
+var dataReload = document.querySelectorAll("[data-reload")
 
 var findlink = document.getElementById("logoLink")
 var productHash1 = document.getElementById("product1")
@@ -46,25 +46,26 @@ if (window.location.hash) {
         animalButton.textContent = language.eng.basketButton2;
 
         const myfont = document.querySelectorAll("#animalButton, #bunnyButton, #emptyCart, #pageAnimals, #buyButton1, #buyButton2, #buyButton3, #buyButton4, #buyButton5, #buyButton6, #buyButton7, #buyButton8, #buyButton9, #buyButton10, #buyButton11, #buyButton12");
-        
+
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";
         });
 
-        findlink.href = "../../index.html#eng";
-        productHash1.href = "../product/product-page.html#eng";
-        productHash2.href = "../product/product-page.html#eng";
-        productHash3.href = "../product/product-page.html#eng";
-        productHash4.href = "../product/product-page.html#eng";
-        productHash5.href = "../product/product-page.html#eng";
-        productHash6.href = "../product/product-page.html#eng";
-        productHash7.href = "../product/product-page.html#eng";
-        productHash8.href = "../product/product-page.html#eng";
-        productHash9.href = "../product/product-page.html#eng";
-        productHash10.href = "../product/product-page.html#eng";
-        productHash11.href = "../product/product-page.html#eng";
-        productHash12.href = "../product/product-page.html#eng";
-        HashBasketButton1.href = "templates/product/bunnies.html#eng"
+        findlink.href = "app/templates/main/index.html#eng";
+        productHash1.href = "app/templates/product/product-page.html#eng";
+        productHash2.href = "app/templates/product/product-page.html#eng";
+        productHash3.href = "app/templates/product/product-page.html#eng";
+        productHash4.href = "app/templates/product/product-page.html#eng";
+        productHash5.href = "app/templates/product/product-page.html#eng";
+        productHash6.href = "app/templates/product/product-page.html#eng";
+        productHash7.href = "app/templates/product/product-page.html#eng";
+        productHash8.href = "app/templates/product/product-page.html#eng";
+        productHash9.href = "app/templates/product/product-page.html#eng";
+        productHash10.href = "app/templates/product/product-page.html#eng";
+        productHash11.href = "app/templates/product/product-page.html#eng";
+        productHash12.href = "app/templates/product/product-page.html#eng";
+        HashBasketButton1.href = "app/templates/product/bunnies.html#eng"
+        HashBasketButton2.href = "app/templates/product/bunnies.html#eng"
     }
 }
 

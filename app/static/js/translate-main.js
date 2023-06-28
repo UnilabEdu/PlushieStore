@@ -1,4 +1,4 @@
-var dataReload = document.querySelectorAll("[data-reload]")
+var dataReload = document.querySelectorAll("[data-reload")
 
 var findlink = document.getElementById("logoLink")
 var addhash1 = document.getElementById("firstCategory")
@@ -19,6 +19,8 @@ var language = {
         FirstTab: "Popular",
         SecondTab: "Delivery Service",
         ThirdTab: "Contact",
+        additionalTab: "Questions",
+        conditionsTab: "Terms and Conditions",
         button: "Buy",
         bunnies: "Bunnies",
         animals: "Animals",
@@ -36,6 +38,8 @@ if (window.location.hash) {
         featuredProducts.textContent = language.eng.FirstTab;
         deliveryTab.textContent = language.eng.SecondTab;
         contactTab.textContent = language.eng.ThirdTab;
+        questionsTab.textContent = language.eng.additionalTab;
+        termsTab.textContent = language.eng.conditionsTab;
         buyButton1.textContent = language.eng.button;
         buyButton2.textContent = language.eng.button;
         buyButton3.textContent = language.eng.button;
@@ -49,16 +53,16 @@ if (window.location.hash) {
         deliverySectionTitle.textContent = language.eng.SecondTab;
         deliveryTbilisi.textContent = language.eng.tbilisi;
         deliveryRegions.textContent = language.eng.regions;
-        contactSectionTitle.textContent = language.eng.ThirdTab;
         burgerBunnies.textContent = language.eng.bunnies;
         burgerAnimals.textContent = language.eng.animals;
         burgerDelivery.textContent = language.eng.SecondTab;
         burgerContact.textContent = language.eng.ThirdTab;
+        burgerQuestions.textContent = language.eng.additionalTab;
         emptyCart.textContent = language.eng.basket;
         bunnyButton.textContent = language.eng.basketButton1;
         animalButton.textContent = language.eng.basketButton2;
 
-        const myfont = document.querySelectorAll("#animalButton, #bunnyButton, #emptyCart, #burgerContact, #burgerDelivery, #burgerAnimals, #burgerBunnies, #featuredProducts, #deliveryTab, #contactTab, #buyButton1, #buyButton2, #buyButton3, #buyButton4, #buyButton5, #buyButton6, #buyButton7, #categoryBunnies, #categoryAnimals, #popularToys, #deliverySectionTitle, #deliveryTbilisi, #deliveryRegions, #contactSectionTitle");
+        const myfont = document.querySelectorAll("#phone, #mail, #termsTab, #animalButton, #bunnyButton, #emptyCart, #burgerQuestions, #burgerContact, #burgerDelivery, #burgerAnimals, #burgerBunnies, #featuredProducts, #questionsTab, #deliveryTab, #contactTab, #buyButton1, #buyButton2, #buyButton3, #buyButton4, #buyButton5, #buyButton6, #buyButton7, #categoryBunnies, #categoryAnimals, #popularToys, #deliverySectionTitle, #deliveryTbilisi, #deliveryRegions, #contactSectionTitle");
 
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";
@@ -66,6 +70,7 @@ if (window.location.hash) {
 
             findlink.href = "#eng";
             addhash1.href = "app/templates/product/bunnies.html#eng"
+            addhash2.href = "app/templates/product/bunnies.html#eng"
             HashFeatured1.href = "app/templates/product/product-page.html#eng"
             HashFeatured2.href = "app/templates/product/product-page.html#eng"
             HashFeatured3.href = "app/templates/product/product-page.html#eng"
@@ -74,6 +79,7 @@ if (window.location.hash) {
             HashFeatured6.href = "app/templates/product/product-page.html#eng"
             HashFeatured7.href = "app/templates/product/product-page.html#eng"
             HashBasketButton1.href = "app/templates/product/bunnies.html#eng"
+            HashBasketButton2.href = "app/templates/product/bunnies.html#eng"
     }
 }
 

@@ -28,13 +28,12 @@ var amount = document.querySelector(".counter-active").innerHTML;
 if (amount !== '0') {
   document.getElementById('myModal').remove();
   if (window.location.hash === "#eng") {
-    addHref.href = "../product/cart.html#eng";
+    addHref.href = "app/templates/product/cart.html#eng";
   }
   else {
-    addHref.href = "../product/cart.html";
+    addHref.href = "app/templates/product/cart.html";
   }
 }
-
 
 
 

@@ -1,4 +1,4 @@
-var dataReload = document.querySelectorAll("[data-reload]")
+var dataReload = document.querySelectorAll("[data-reload")
 
 var findlink = document.getElementById("logoLink")
 var addHash = document.getElementById("cartIcon")
@@ -45,13 +45,13 @@ if (window.location.hash) {
         remove.textContent = language.eng.delete
 
         const myfont = document.querySelectorAll("#remove, #total, #cartAmount, #cartPay, #LRAddress, #LRPhone, #LRName, #LSEmail, #LSPhone, #LSName, #adress, #rphone, #rname, #email, #phone, #sname, #cartPrice, #cartTitle, #burgerContact, #burgerDelivery, #burgerAnimals, #burgerBunnies");
-        
+
         myfont.forEach((element) => {
             element.style.fontFamily = "Handlee";
         });
 
-        findlink.href = "../../index.html#eng";
-        addHash.href = "../product/cart.html#eng";
+        findlink.href = "app/templates/product/cart.html#eng";
+        addHash.href = "app/templates/product/cart.html#eng";
     }
 }
 

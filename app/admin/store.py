@@ -1,12 +1,17 @@
 from wtforms.validators import DataRequired
-
 from app.admin import SecureModelView
 from wtforms.fields import SelectField, TextAreaField
+from flask_admin.form.upload import ImageUploadField
+from os import path
 
 
 class CityView(SecureModelView):
-    column_labels = {"name_geo": "სახელი ქართულად", "name_eng": "სახელი ინგლისურად", "delivery_cost": "ფასი ლარში",
-                     "delivery_delay": "მიწოდების დრო"}
+    column_labels = {
+        "name_geo": "სახელი ქართულად",
+        "name_eng": "სახელი ინგლისურად",
+        "delivery_cost": "ფასი ლარში",
+        "delivery_delay": "მიწოდების დრო"
+    }
     can_delete = True
     can_edit = True
 
@@ -34,7 +39,7 @@ class OrderView(SecureModelView):
 
 
 class ToyView(SecureModelView):
-    column_list = ["category", "photo", "name_geo", "name_eng", "price", "stock", "is_popular"]
+    column_list = ["photo", "name_geo", "name_eng", "price", "stock", "is_popular", "category"]
     column_labels = {
         "category": "კატეგორია",
         "photo": "სურათი",
@@ -47,7 +52,11 @@ class ToyView(SecureModelView):
         "is_popular": "პოპულარული/არაპოპულარული"
     }
     column_editable_list = ["is_popular"]
-    form_overrides = {"desc_eng": TextAreaField, "desc_geo": TextAreaField}
+
+    form_overrides = {"desc_eng": TextAreaField, "desc_geo": TextAreaField,
+                      'photo': ImageUploadField}
+
+    form_args = {"photo": {"base_path": path.dirname("app/static/img/products/")}}
 
 
 class ToyCategoryView(SecureModelView):
@@ -59,6 +68,3 @@ class ToyCategoryView(SecureModelView):
     }
     column_list = ["name_geo", "name_eng"]
     form_overrides = {"description_eng": TextAreaField, "description_geo": TextAreaField}
-
-
-
