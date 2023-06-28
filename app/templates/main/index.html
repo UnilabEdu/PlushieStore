@@ -12,8 +12,7 @@
         <section class="categories">
             {% for category in categories %}
             <div class="category">
-                <a href="{{ url_for('product.bunnies', category_id=category.id) }}" data-reload
-                   onclick="PageReload()">
+                <a href="{{ url_for('product.bunnies', category_id=category.id) }}">
                     <img src="{{ url_for('static', filename='img/category covers/bunny-category-cover.jpg') }}"
                          alt="pink bunny toy">
                     <h3>{{ category.name_geo }}</h3>
