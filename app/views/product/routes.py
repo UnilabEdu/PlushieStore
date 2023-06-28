@@ -10,8 +10,8 @@ product_blueprint = Blueprint("product", __name__, template_folder=TEMPALTE_FOLD
 
 @product_blueprint.route("/bunnies/<int:category_id>")
 def bunnies(category_id):
-    categorie = ToyCategory.query.filter_by(id=category_id).first()
-    toys = Toy.query.filter_by(category_id=category_id)
+    categorie = ToyCategory.query.get(category_id)
+    toys = Toy.query.filter_by(category_id=categorie.id)
     return render_template("bunnies.html", toys=toys, categorie=categorie)
 
 
