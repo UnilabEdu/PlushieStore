@@ -1,8 +1,10 @@
-from wtforms.validators import DataRequired
 from app.admin import SecureModelView
 from wtforms.fields import SelectField, TextAreaField
 from flask_admin.form.upload import ImageUploadField
 from os import path
+from app.models import Order
+
+PAGE_SIZE = 10
 
 
 class CityView(SecureModelView):
@@ -14,6 +16,8 @@ class CityView(SecureModelView):
     }
     can_delete = True
     can_edit = True
+    column_filters = ["name_geo", "name_eng", "delivery_cost", "delivery_delay"]
+    page_size = PAGE_SIZE
 
 
 class OrderView(SecureModelView):
@@ -32,10 +36,12 @@ class OrderView(SecureModelView):
     }
     can_export = True
     form_overrides = {"order_status": SelectField, "admin_note": TextAreaField, "customer_note": TextAreaField}
-    form_args = {"order_status": {"validators": [DataRequired()],
-                                  "choices": ["გადახდილი", "გადაუხდელი", "გაგზავნილი", "მიტანილი", "უკან მობრუნებული"]}}
+    form_args = {"order_status": {"choices": ["გადახდილი", "გადაუხდელი", "გაგზავნილი", "მიტანილი", "უკან მობრუნებული"]}}
+    # column_editable_list = ["order_status", "delivery_date", "admin_note"]
 
     column_filters = ["order_status", "delivery_date"]
+    #
+    page_size = PAGE_SIZE
 
 
 class ToyView(SecureModelView):
@@ -49,7 +55,7 @@ class ToyView(SecureModelView):
         "desc_geo": "აღწერა ქართულად",
         "price": "ფასი",
         "stock": "რაოდენობა",
-        "is_popular": "პოპულარული/არაპოპულარული"
+        "is_popular": "ჩანს პოპულარულებში"
     }
     column_editable_list = ["is_popular"]
 
@@ -57,6 +63,9 @@ class ToyView(SecureModelView):
                       'photo': ImageUploadField}
 
     form_args = {"photo": {"base_path": path.dirname("app/static/img/products/")}}
+    column_filters = ["category", "photo", "name_geo", "name_eng", "desc_eng", "desc_geo", "price", "stock",
+                      "is_popular"]
+    page_size = PAGE_SIZE
 
 
 class ToyCategoryView(SecureModelView):
@@ -69,3 +78,5 @@ class ToyCategoryView(SecureModelView):
     column_list = ["name_geo", "name_eng"]
     form_overrides = {"description_eng": TextAreaField, "description_geo": TextAreaField, 'photo': ImageUploadField}
     form_args = {"photo": {"base_path": path.dirname("app/static/img/category covers/")}}
+    column_filters = ["name_geo", "name_eng", "description_geo", "description_eng"]
+    page_size = PAGE_SIZE

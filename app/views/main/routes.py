@@ -12,4 +12,3 @@ def home():
     toys = Toy.query.filter_by(is_popular=True)[:7]
     categories = ToyCategory.query.all()
     return render_template("index.html", categories=categories, toys=toys)
-
