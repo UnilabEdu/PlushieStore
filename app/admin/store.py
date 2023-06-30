@@ -2,7 +2,6 @@ from app.admin import SecureModelView
 from wtforms.fields import SelectField, TextAreaField
 from flask_admin.form.upload import ImageUploadField
 from os import path
-from app.models import Order
 
 PAGE_SIZE = 10
 
@@ -38,6 +37,7 @@ class OrderView(SecureModelView):
     form_overrides = {"order_status": SelectField, "admin_note": TextAreaField, "customer_note": TextAreaField}
     form_args = {"order_status": {"choices": ["გადახდილი", "გადაუხდელი", "გაგზავნილი", "მიტანილი", "უკან მობრუნებული"]}}
 
+    column_editable_list = ["admin_note"]
     column_filters = ["order_status", "delivery_date"]
 
     page_size = PAGE_SIZE
@@ -76,6 +76,6 @@ class ToyCategoryView(SecureModelView):
     }
     column_list = ["name_geo", "name_eng"]
     form_overrides = {"description_eng": TextAreaField, "description_geo": TextAreaField, 'photo': ImageUploadField}
-    form_args = {"photo": {"base_path": path.dirname("app/static/img/category covers/")}}
+    form_args = {"photo": {"base_path": path.dirname("app/static/img/covers/")}}
     column_filters = ["name_geo", "name_eng", "description_geo", "description_eng"]
     page_size = PAGE_SIZE

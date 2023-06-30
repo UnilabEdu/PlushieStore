@@ -4,7 +4,7 @@
 {% block main %}
 <main>
     <div class="container">
-        <a class="go-back" href="{{ url_for('product.bunnies', category_id=toy.category_id) }}">
+        <a class="go-back" href="{{ url_for('product.category', category_id=toy.category_id) }}">
             <img src="{{ url_for('static', filename='img/icons/arrow.png') }}" alt="back arrow">
         </a>
         <h1 id="productTitle">{{ toy.name_geo }}</h1>

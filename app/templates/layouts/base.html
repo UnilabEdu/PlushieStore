@@ -58,8 +58,8 @@
             </div>
         </div>
         <ul class="nav-links">
-            <li><a href="{{ url_for('product.bunnies', category_id=1) }}">ბაჭიები</a></li>
-            <li><a href="{{ url_for('product.bunnies', category_id=2) }}">ცხოველები</a></li>
+            <li><a href="{{ url_for('product.category', category_id=1) }}">ბაჭიები</a></li>
+            <li><a href="{{ url_for('product.category', category_id=2) }}">ცხოველები</a></li>
             <li><a href="{{ url_for('static', filename='../../index.html#delivery-service') }}">მიტანის სერვისი</a></li>
             <li><a href="{{ url_for('static', filename='../../index.html#contact-us') }}">კონტაქტი</a></li>
             <li><a id="burgerQuestions" href="static/pages/questions.html">კითხვები</a></li>
@@ -70,8 +70,8 @@
             <span class="close">&times;</span>
             <p id="emptyCart">კალათა ცარიელია</p>
             <div>
-                <a id="bunnyButton" href="{{ url_for('product.bunnies', category_id=1) }}">აირჩიე ბაჭია</a>
-                <a id="animalButton" href="{{ url_for('product.bunnies', category_id=2) }}">აირჩიე სხვა ცხოველი</a>
+                <a id="bunnyButton" href="{{ url_for('product.category', category_id=1) }}">აირჩიე ბაჭია</a>
+                <a id="animalButton" href="{{ url_for('product.category', category_id=2) }}">აირჩიე სხვა ცხოველი</a>
             </div>
         </div>
     </div>
