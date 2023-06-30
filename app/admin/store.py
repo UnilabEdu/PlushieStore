@@ -37,10 +37,9 @@ class OrderView(SecureModelView):
     can_export = True
     form_overrides = {"order_status": SelectField, "admin_note": TextAreaField, "customer_note": TextAreaField}
     form_args = {"order_status": {"choices": ["გადახდილი", "გადაუხდელი", "გაგზავნილი", "მიტანილი", "უკან მობრუნებული"]}}
-    # column_editable_list = ["order_status", "delivery_date", "admin_note"]
 
     column_filters = ["order_status", "delivery_date"]
-    #
+
     page_size = PAGE_SIZE
 
 
