@@ -1,6 +1,6 @@
 from flask import Flask
 from app.config import Config
-from app.extensions import db, login_manager, migrate
+from app.extensions import db, login_manager, migrate, ckeditor
 from app.commands import init_db, populate_db
 from app.views import main_blueprint, product_blueprint, auth_blueprint
 from app.admin import admin, SecureModelView, UserView, CityView, OrderView, ToyView, ToyCategoryView
@@ -39,13 +39,16 @@ def register_extensions(app):
 
     # Flask-Admin
     admin.init_app(app)
-    admin.add_view(UserView(User, db.session, name="მომხმარებლები"))
     admin.add_view(OrderView(Order, db.session, name="შეკვეთები"))
+    admin.add_view(UserView(User, db.session, name="მომხმარებლები"))
     admin.add_view(ToyView(Toy, db.session, name="სათამაშოები"))
     admin.add_view(ToyCategoryView(ToyCategory, db.session, name="კატეგორიები"))
     admin.add_view(CityView(City, db.session, name="ქალაქები"))
 
-    admin.add_link(MenuLink("უკან დაბრუნება", url="/"))
+    admin.add_link(MenuLink("გასვლა", url="/"))
+
+    # Flask-CKEditor
+    ckeditor.init_app(app)
 
 
 def register_blueprints(app):

@@ -2,7 +2,7 @@ var amount = document.querySelector(".counter").innerHTML;
 var addHref = document.getElementById("cartIcon");
 
 if (amount !== null) {
-  addHref.href = "../product/cart.html";
+  addHref.href = "app/templates/product/cart.html";
   document.getElementById("amountNum").innerText = amount;
   let num1 = document.getElementById("amountNum").innerHTML;
   let num2 = document.getElementById("priceNum").innerHTML;

@@ -4,13 +4,13 @@
 {% block main %}
 <main>
     <div class="container">
-        <a class="go-back" href="bunnies.html">
-            <img src="../../static/img/icons/arrow.png" alt="back arrow">
+        <a class="go-back" href="{{ url_for('product.category', category_id=toy.category_id) }}">
+            <img src="{{ url_for('static', filename='img/icons/arrow.png') }}" alt="back arrow">
         </a>
         <h1 id="productTitle">{{ toy.name_geo }}</h1>
         <div class="product-details">
             <div class="product-image">
-                <img src="{{ toy.photo }}" alt="{{ toy.name_eng }}">
+                <img src="{{ url_for('static', filename='img/products/' + toy.photo) }}" alt="{{ toy.name_eng }}">
             </div>
             <div class="product-description">
                 <p id="description">{{ toy.desc_geo }}</p>

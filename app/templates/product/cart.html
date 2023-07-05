@@ -5,12 +5,12 @@
 <main>
     <div class="container cart-container">
         <a class="go-back" href="../product/product-page.html">
-            <img src="../../static/img/icons/arrow.png" alt="back arrow">
+            <img src="{{ url_for('static', filename='img/icons/arrow.png') }}" alt="back arrow">
         </a>
         <h1 id="cartTitle">კალათი</h1>
         <div class="cart-products">
             <div class="cart-product-image">
-                <img id="cartImg" src="../../static/img/products/bunny-purple.jpg" alt="purple bunny toy">
+                <img id="cartImg" src="{{ url_for('static', filename='img/products/' + toy.photo) }}" alt="purple bunny toy">
             </div>
 
             <div class="cart-details">

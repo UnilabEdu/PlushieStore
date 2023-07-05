@@ -7,21 +7,16 @@
 {% endblock %}
 
 {% block main %}
+
 <main>
     <div class="main-container">
-        <ul class="pages">
-            <li><a id="featuredProducts" href="#featured">პოპულარული</a></li>
-            <li><a id="deliveryTab" href="#delivery-service">მიტანის სერვისი</a></li>
-            <li><a id="contactTab" href="#contact-us">კონტაქტი</a></li>
-        </ul>
         <section class="categories">
             {% for category in categories %}
             <div class="category">
-                <a id="firstCategory" href="{{ url_for('product.bunnies', category_id=category.id) }}" data-reload
-                   onclick="PageReload()">
-                    <img src="{{ url_for('static', filename='img/category covers/bunny-category-cover.jpg') }}"
+                <a href="{{ url_for('product.category', category_id=category.id) }}">
+                    <img src="{{ url_for('static', filename='img/covers/' + category.photo) }}"
                          alt="pink bunny toy">
-                    <h3 id="categoryBunnies">{{ category.name_geo }}</h3>
+                    <h3>{{ category.name_geo }}</h3>
                 </a>
             </div>
             {% endfor %}
@@ -31,8 +26,9 @@
             <ul>
                 {% for toy in toys %}
                 <li class="product featured-toy">
-                    <a id="featuredToy1" href="{{ url_for('product.view_product') }}">
-                        <img src="{{ toy.photo }}" alt="{{ toy.name_eng }}">
+                    <a id="featuredToy1" href="{{ url_for('product.view_product', id=toy.id) }}">
+                        <img src="{{ url_for('static', filename='img/products/' + toy.photo) }}"
+                             alt="{{ toy.name_eng }}">
                         <div class="product-info">
                             <span>{{ toy.price }}₾</span>
                             <button id="buyButton1" type="submit">შეძენა</button>
@@ -40,7 +36,6 @@
                     </a>
                 </li>
                 {% endfor %}
-
             </ul>
         </section>
         <section class="delivery" id="delivery-service">
@@ -59,25 +54,6 @@
                     <span id="deliveryTbilisi">თბილისში მიტანა შესაძლებელია შეკვეთიდან მეორე დღეს. მიტანის ღირებულება ცენტრალურ უბნებში 6 ლარი, ხოლო გარეუბნებში 8 ლარია.</span>
                     <span id="deliveryRegions">რეგიონებში სათამაშოები იგზავნება ფოსტით. გაგზავნის ღირებულება ქალაქებში 10 ლარი, ხოლო სოფლებში 12 ლარია. ამანათის ჩამოსვლის დრო დამოკიდებულია რეგიონზე.</span>
                 </div>
-            </div>
-        </section>
-        <section class="contact" id="contact-us">
-            <h2 id="contactSectionTitle">კონტაქტი</h2>
-            <div class="location-map">
-                <a href="https://goo.gl/maps/9Zs5RwC9hJ6uZ63q8">
-                    <button>გვიპოვე რუკაზე</button>
-                </a>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.6058920630403!2d44.763317715373084!3d41.70744287923604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044733499a85e35%3A0xcd92e6a6fb79676!2zMzQtMzYg4YOQ4YOR4YOQ4YOo4YOY4YOr4YOY4YOhIOGDpeGDo-GDqeGDkCwg4YOX4YOR4YOY4YOa4YOY4YOh4YOY!5e0!3m2!1ska!2sge!4v1681034851432!5m2!1ska!2sge"
-                        width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="contact-details">
-                <address>
-                    <a href="tel:+995557177017">(995)557177017</a>
-                </address>
-                <address>
-                    <a href="mailto:tiko.barnabishvili@gmail.com">tiko.barnabishvili@gmail.com</a>
-                </address>
             </div>
         </section>
     </div>
