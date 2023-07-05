@@ -1,6 +1,7 @@
 from app.admin import SecureModelView
 from wtforms.fields import SelectField, TextAreaField
 from flask_admin.form.upload import ImageUploadField
+from flask_ckeditor.fields import CKEditorField
 from os import path
 
 PAGE_SIZE = 10
@@ -16,6 +17,7 @@ class CityView(SecureModelView):
     can_delete = True
     can_edit = True
     column_filters = ["name_geo", "name_eng", "delivery_cost", "delivery_delay"]
+    column_searchable_list = ["name_geo", "name_eng", "delivery_cost", "delivery_delay"]
     page_size = PAGE_SIZE
 
 
@@ -40,6 +42,10 @@ class OrderView(SecureModelView):
     column_editable_list = ["admin_note"]
     column_filters = ["order_status", "delivery_date"]
 
+    column_searchable_list = ["order_id", "ordered_toys", "order_price", "customer_info", "customer_phone",
+                              "customer_address", "customer_note", "order_status", "order_date", "delivery_date",
+                              "admin_note"]
+
     page_size = PAGE_SIZE
 
 
@@ -54,21 +60,30 @@ class ToyView(SecureModelView):
         "desc_geo": "აღწერა ქართულად",
         "price": "ფასი",
         "stock": "რაოდენობა",
+        "meta_geo": "Meta desc geo",
+        "meta_eng": "Meta desc eng",
         "is_popular": "ჩანს პოპულარულებში"
     }
     column_editable_list = ["is_popular"]
+    list_template = "admin/newlist.html"
+    create_template = "admin/newcreate.html"
 
-    form_overrides = {"desc_eng": TextAreaField, "desc_geo": TextAreaField,
-                      'photo': ImageUploadField}
+    form_overrides = {"desc_eng": CKEditorField, "desc_geo": CKEditorField, "meta_eng": TextAreaField,
+                      "meta_geo": TextAreaField, 'photo': ImageUploadField}
 
-    form_args = {"photo": {"base_path": path.dirname("app/static/img/products/")}}
+    form_args = {"photo": {"base_path": path.dirname("app/static/img/products/"),
+                           "url_relative_path": "img/products/"}}
     column_filters = ["category", "photo", "name_geo", "name_eng", "desc_eng", "desc_geo", "price", "stock",
-                      "is_popular"]
+                      "is_popular", "meta_geo", "meta_eng"]
+
+    column_searchable_list = ["photo", "name_geo", "name_eng", "desc_eng", "desc_geo", "price", "stock",
+                              "meta_geo", "meta_eng"]
     page_size = PAGE_SIZE
 
 
 class ToyCategoryView(SecureModelView):
     column_labels = {
+        "photo": "სურათი",
         "name_geo": "სახელი ქართულად",
         "name_eng": "სახელი ინგლისურად",
         "description_geo": "აღწერა ქართულად",
@@ -76,6 +91,9 @@ class ToyCategoryView(SecureModelView):
     }
     column_list = ["name_geo", "name_eng"]
     form_overrides = {"description_eng": TextAreaField, "description_geo": TextAreaField, 'photo': ImageUploadField}
-    form_args = {"photo": {"base_path": path.dirname("app/static/img/covers/")}}
+    form_args = {"photo": {"base_path": path.dirname("app/static/img/covers/"),
+                           "url_relative_path": "img/covers/"}}
     column_filters = ["name_geo", "name_eng", "description_geo", "description_eng"]
     page_size = PAGE_SIZE
+
+    column_searchable_list = ["name_geo", "name_eng", "description_geo", "description_eng"]

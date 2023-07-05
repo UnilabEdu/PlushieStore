@@ -49,7 +49,7 @@ def populate_db():
     for img in os.listdir(directory):
         if img.endswith('.jpg'):
             toy1 = Toy(desc_eng=f"description", desc_geo=f"აღწერა", photo=img, name_geo=f"ლურჯი ბაჭია",
-                       name_eng=f"blue bunny", price=30, stock=2,
+                       name_eng=f"blue bunny", price=30, stock=2, meta_eng="meta desc eng", meta_geo="meta desc geo",
                        is_popular=True, category_id=1)
             toy1.create(commit=False)
     Toy.save()
