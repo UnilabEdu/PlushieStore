@@ -15,11 +15,14 @@
 {%- endmacro %}
 
 {% macro menu(menu_root=None) %}
+
   {% set is_main_nav = menu_root == None %}
+
   {% if menu_root is none %}{% set menu_root = admin_view.admin.menu() %}{% endif %}
+
   {%- for item in menu_root %}
-    {% if item.name != "Home" %}
-        {%- if item.is_category() -%}
+
+      {%- if item.is_category() -%}
       {% set children = item.get_children() %}
       {%- if children %}
         {% set class_name = item.get_class_name() or '' %}
@@ -67,12 +70,17 @@
             {%- else %}
           <li{% if class_name %} class="{{ class_name }}"{% endif %}>
         {%- endif %}
-      <a class="nav-link" href="{{ item.get_url() }}"{% if item.target %} target="{{ item.target }}"{% endif %}>
-        {{ menu_icon(item) }}{{ item.name }}</a>
+
+        {% if item.name != "Home" %}
+          <a class="nav-link" href="{{ item.get_url() }}"{% if item.target %} target="{{ item.target }}"{% endif %}>
+          {{ menu_icon(item) }}{{ item.name }}</a>
+        {% endif %}
+
+
       </li>
       {%- endif -%}
     {% endif -%}
-    {% endif %}
+
 
   {% endfor %}
 {% endmacro %}
