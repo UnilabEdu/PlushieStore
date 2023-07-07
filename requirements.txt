@@ -5,5 +5,6 @@ Flask-Migrate==4.0.4
 Flask-SQLAlchemy==3.0.3
 Flask-WTF==1.1.1
 Flask-CKEditor==0.4.6
+Flask-Babel==3.1.0
 gunicorn
 Pillow==9.5.0
