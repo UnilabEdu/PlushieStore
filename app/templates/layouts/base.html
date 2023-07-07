@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>final project</title>
+    <title>Amigurumi</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <meta name="description" content="Handmade soft animal toys made of harmless materials">
@@ -24,12 +24,12 @@
     <nav>
         <div class="container header-container">
             <ul class="languages">
-                <li><a href="#ka">KA</a></li>
-                <li><a href="#eng">EN</a></li>
+                <li><a href="{{ url_for('main.change_language') }}" {% if session['locale'] == 'EN' %} style="pointer-events: none"{% else %}style=""{% endif %}>KA</a></li>
+                <li><a href="{{ url_for('main.change_language') }}" {% if session['locale'] == 'KA' %} style="pointer-events: none"{% else %}style=""{% endif %}>EN</a></li>
             </ul>
             <ul class="pages">
-                <li><a id="featuredProducts" href="#featured">პოპულარული</a></li>
-                <li><a id="questionsTab" href="static/pages/questions.html">კითხვები</a></li>
+                <li><a id="featuredProducts" href="#featured">{{_('პოპულარული')}}</a></li>
+                <li><a id="questionsTab" href="static/pages/questions.html">{{_('კითხვები')}}</a></li>
             </ul>
             <div class="logo" id="logoDiv">
                 <a id="logoLink" href="{{ url_for('main.home') }}">
@@ -37,8 +37,8 @@
                 </a>
             </div>
             <ul class="pages">
-                <li><a id="deliveryTab" href="#delivery-service">მიტანის სერვისი</a></li>
-                <li><a id="contactTab" href="#contact-us">კონტაქტი</a></li>
+                <li><a id="deliveryTab" href="#delivery-service">{{_('მიტანის სერვისი')}}</a></li>
+                <li><a id="contactTab" href="#contact-us">{{_('კონტაქტი')}}</a></li>
             </ul>
             <div class="icons">
                 <a class="cart" id="cartIcon">
@@ -59,20 +59,20 @@
             </div>
         </div>
         <ul class="nav-links">
-            <li><a href="{{ url_for('product.category', category_id=1) }}">ბაჭიები</a></li>
-            <li><a href="{{ url_for('product.category', category_id=2) }}">ცხოველები</a></li>
-            <li><a href="{{ url_for('static', filename='../../index.html#delivery-service') }}">მიტანის სერვისი</a></li>
-            <li><a href="{{ url_for('static', filename='../../index.html#contact-us') }}">კონტაქტი</a></li>
-            <li><a id="burgerQuestions" href="static/pages/questions.html">კითხვები</a></li>
+            <li><a href="{{ url_for('product.category', category_id=1) }}">{{_('ბაჭიები')}}</a></li>
+            <li><a href="{{ url_for('product.category', category_id=2) }}">{{_('ცხოველები')}}</a></li>
+            <li><a href="{{ url_for('static', filename='../../index.html#delivery-service') }}">{{_('მიტანის სერვისი')}}</a></li>
+            <li><a href="{{ url_for('static', filename='../../index.html#contact-us') }}">{{_('კონტაქტი')}}</a></li>
+            <li><a id="burgerQuestions" href="static/pages/questions.html">{{_('კითხვები')}}</a></li>
         </ul>
     </nav>
     <div class="modal" id="myModal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p id="emptyCart">კალათა ცარიელია</p>
+            <p id="emptyCart">{{_('კალათა ცარიელია')}}</p>
             <div>
-                <a id="bunnyButton" href="{{ url_for('product.category', category_id=1) }}">აირჩიე ბაჭია</a>
-                <a id="animalButton" href="{{ url_for('product.category', category_id=2) }}">აირჩიე სხვა ცხოველი</a>
+                <a id="bunnyButton" href="{{ url_for('product.category', category_id=1) }}">{{_('აირჩიე ბაჭია')}}</a>
+                <a id="animalButton" href="{{ url_for('product.category', category_id=2) }}">{{_('აირჩიე სხვა ცხოველი')}}</a>
             </div>
         </div>
     </div>
@@ -108,7 +108,7 @@
                 <a id="mail" href="mailto:info@amigurumi.ge">info@amigurumi.ge</a>
             </address>
         </div>
-        <a class="terms" id="termsTab" href="static/pages/terms.html">წესები და პირობები</a>
+        <a class="terms" id="termsTab" href="static/pages/terms.html">{{_('წესები და პირობები')}}</a>
     </nav>
 </footer>
 <script src="{{ url_for('static', filename='js/translate-category-bunnies.js') }}"></script>

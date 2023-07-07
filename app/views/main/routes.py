@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, session, url_for, redirect, request
 from app.config import Config
 from os import path
 from app.models import ToyCategory, Toy
@@ -12,3 +12,14 @@ def home():
     toys = Toy.query.filter_by(is_popular=True)[:7]
     categories = ToyCategory.query.all()
     return render_template("index.html", categories=categories, toys=toys)
+
+
+@main_blueprint.route("/change_ln")
+def change_language():
+    if session['locale'] == 'EN':
+        session['locale'] = 'KA'
+    else:
+        session['locale'] = 'EN'
+
+    previous_url = request.referrer
+    return redirect(previous_url)
