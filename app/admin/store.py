@@ -67,6 +67,8 @@ class ToyView(SecureModelView):
     column_editable_list = ["is_popular"]
     list_template = "admin/newlist.html"
     create_template = "admin/newcreate.html"
+    edit_template = "admin/newedit.html"
+
 
     form_overrides = {"desc_eng": CKEditorField, "desc_geo": CKEditorField, "meta_eng": TextAreaField,
                       "meta_geo": TextAreaField, 'photo': ImageUploadField}
