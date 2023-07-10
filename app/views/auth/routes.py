@@ -39,7 +39,7 @@ def login():
             if next:
                 return redirect(next)
             elif user.role_id == 1:
-                return redirect(url_for('admin.index'))
+                return redirect('/admin/order/')
             else:
                 return redirect(url_for("main.home"))
         else:

@@ -1,0 +1,87 @@
+# Georgian translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-07-07 19:03+0400\n"
+"PO-Revision-Date: 2023-07-07 19:04+0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ka\n"
+"Language-Team: ka <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: app/templates/layouts/base.html:30
+msgid "პოპულარული"
+msgstr "Popular"
+
+#: app/templates/layouts/base.html:31 app/templates/layouts/base.html:65
+msgid "კითხვები"
+msgstr "Questions"
+
+#: app/templates/layouts/base.html:39 app/templates/layouts/base.html:63
+#: app/templates/main/index.html:42
+msgid "მიტანის სერვისი"
+msgstr "Delivery service"
+
+#: app/templates/layouts/base.html:40 app/templates/layouts/base.html:64
+msgid "კონტაქტი"
+msgstr "Contact"
+
+#: app/templates/layouts/base.html:61
+msgid "ბაჭიები"
+msgstr "Bunnies"
+
+#: app/templates/layouts/base.html:62
+msgid "ცხოველები"
+msgstr "Animals"
+
+#: app/templates/layouts/base.html:71
+msgid "კალათა ცარიელია"
+msgstr "The cart is empty"
+
+#: app/templates/layouts/base.html:73
+msgid "აირჩიე ბაჭია"
+msgstr "Choose a bunny"
+
+#: app/templates/layouts/base.html:74
+msgid "აირჩიე სხვა ცხოველი"
+msgstr "Choose another animal"
+
+#: app/templates/layouts/base.html:110
+msgid "წესები და პირობები"
+msgstr "Terms and Conditions"
+
+#: app/templates/main/index.html:25
+msgid "პოპულარული სათამაშოები"
+msgstr "Popular toys"
+
+#: app/templates/main/index.html:34 app/templates/product/bunnies.html:19
+#: app/templates/product/product-page.html:22
+msgid "შეძენა"
+msgstr "Purchase"
+
+#: app/templates/main/index.html:54
+msgid ""
+"თბილისში მიტანა შესაძლებელია შეკვეთიდან მეორე დღეს. მიტანის ღირებულება "
+"ცენტრალურ უბნებში 6 ლარი, ხოლო გარეუბნებში 8 ლარია."
+msgstr "It can be delivered to Tbilisi the next day after ordering. The cost of delivery is 6 GEL in the central areas, and 8 GEL in the suburbs."
+
+#: app/templates/main/index.html:55
+msgid ""
+"რეგიონებში სათამაშოები იგზავნება ფოსტით. გაგზავნის ღირებულება ქალაქებში "
+"10 ლარი, ხოლო სოფლებში 12 ლარია. ამანათის ჩამოსვლის დრო დამოკიდებულია "
+"რეგიონზე."
+msgstr "In regions, toys are sent by mail. The cost of sending is 10 GEL in cities, and 12 GEL in villages. Parcel arrival time depends on the region."
+
+#: app/templates/product/product-page.html:18
+msgid "ღირებულება"
+msgstr "Cost"
+

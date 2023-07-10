@@ -4,22 +4,30 @@
 {% block main %}
 <main>
     <div class="container">
-        <a class="go-back" href="bunnies.html">
-            <img src="../../static/img/icons/arrow.png" alt="back arrow">
+        <a class="go-back" href="{{ url_for('product.category', category_id=toy.category_id) }}">
+            <img src="{{ url_for('static', filename='img/icons/arrow.png') }}" alt="back arrow">
         </a>
-        <h1 id="productTitle">{{ toy.name_geo }}</h1>
+        {% if session['locale'] == 'KA' %}
+            <h1>{{ toy.name_eng }}</h1>
+        {% else %}
+            <h1>{{ toy.name_geo }}</h1>
+        {% endif %}
         <div class="product-details">
             <div class="product-image">
-                <img src="{{ toy.photo }}" alt="{{ toy.name_eng }}">
+                <img src="{{ url_for('static', filename='img/products/' + toy.photo) }}" alt="{{ toy.name_eng }}">
             </div>
             <div class="product-description">
-                <p id="description">{{ toy.desc_geo }}</p>
+                {% if session['locale'] == 'KA' %}
+                    <p>{{ toy.desc_eng }}</p>
+                {% else %}
+                    <p>{{ toy.desc_geo }}</p>
+                {% endif %}
                 <div class="buy">
-                    <span id="price">ღირებულება:</span>
+                    <span id="price">{{_('ღირებულება')}}:</span>
                     <div>
                         <span>{{ toy.price }}₾</span>
                         <a id="buyA">
-                            <button class="add-to-cart" id="buyButton">შეძენა</button>
+                            <button class="add-to-cart" id="buyButton">{{_('შეძენა')}}</button>
                         </a>
                     </div>
                 </div>

@@ -94,6 +94,7 @@ header {
 
 .logo {
     max-width: 110px;
+    min-width: 90px;
     width: 15%;
     align-self: center;
 }
@@ -236,11 +237,12 @@ h3, h2 {
 }
 
 .pages {
-    width: 100%;
-    padding: 2% 15% 0;
+    width: 30%;
+    min-width: 297px;
     display: flex;
     justify-content: center;
-    gap: 5%;
+    gap: 15%;
+    align-self: center;
 }
 
 .pages a {
@@ -250,7 +252,7 @@ h3, h2 {
     text-decoration: none;
 }
 
-.popular, .delivery, .contact {
+.popular, .delivery {
     width: 100%;
     padding: 7% 0;
 }
@@ -350,54 +352,7 @@ h3, h2 {
     gap: 20px;
 }
 
-.delivery-info span, .contact address {
-    font-family: var(--main-font-ge);
-    font-size: var(--size-18);
-    color: var(--text-color);
-}
-
-.contact address a {
-    text-decoration: none;
-    color: var(--text-color);
-}
-
-.contact {
-    width: 100%;
-}
-
-.contact h2 {
-    margin-bottom: 1rem;
-}
-
-.contact div {
-    padding: 1rem 0;
-}
-
-.contact-details {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-}
-
-.location-map {
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-
-.location-map a {
-    display: none;
-    text-align: center;
-    background-color: var(--background-color);
-    width: fit-content;
-    padding: 1rem;
-    text-decoration: none;
-    border-radius: 20px;
-}
-
-.location-map a button {
+.delivery-info span {
     font-family: var(--main-font-ge);
     font-size: var(--size-18);
     color: var(--text-color);
@@ -406,24 +361,56 @@ h3, h2 {
 footer {
     background-color: var(--background-color);
     max-height: 70px;
+    min-height: 70px;
     border-top: 1px solid var(--text-color);
+}
+
+footer nav {
+    width: 100%;
+    padding: 1rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 20px;
+    align-content: center;
 }
 
-footer a {
+.social-icons a {
     max-width: 31px;
-    width: 10%;
+    align-self: center;
 }
 
 footer svg {
     display: block;
     width: 100%;
     height: fit-content;
+}
+
+.contact-details {
+    width: 30%;
+    min-width: 365px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer address {
+    align-self: center;
+}
+
+footer a {
+    font-family: var(--main-font-ge);
+    font-size: var(--size-18);
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.terms {
+    align-self: center;
 }
 
 .bunnies, .other-animals {
@@ -712,16 +699,25 @@ footer svg {
     .go-back {
         width: 62px;
     }
+    footer {
+        gap: 5%;
+    }
 }
 
 @media (max-width: 1035px) {
+    .logo a {
+        width: 90%;
+    }
+    .header-container {
+        padding: 1rem 2rem;
+    }
     .container h1, h3, h2 {
         font-size: calc(var(--size-30)*0.75) ;
     }
     .product span, .product button, .product-description p, .product-description button {
         font-size: calc(var(--size-20)*0.85);
     }
-    .delivery-info span, .contact address {
+    .delivery-info span {
         font-size: calc(var(--size-18)*0.85);
     }
     .product-description {
@@ -740,8 +736,11 @@ footer svg {
     h3, h2 {
         font-size: calc(var(--size-30)*0.7) ;
     }
-    .languages a {
-        font-size: calc(var(--size-18)*0.7);
+    .pages {
+        min-width: 240px;
+    }
+    .languages a, .pages a {
+        font-size: calc(var(--size-18)*0.9);
     }
     .icons a {
         height: 11%;
@@ -761,7 +760,7 @@ footer svg {
 }
 
 @media (max-width: 912px) {
-    .container, .header-container, .main-container {
+    .container, .header-container, .main-container, footer nav {
         padding: 1rem 2rem;
     }
     .nav-links.nav-links__active {
@@ -769,15 +768,6 @@ footer svg {
         flex-direction: column;
         align-items: flex-end;
         gap: 10px;
-    }
-    .location-map iframe {
-        display: none;
-    }
-    .location-map a {
-        display: block;
-    }
-    .location-map a button, .pay button {
-        font-size: calc(var(--size-18)*0.8) ;
     }
     .nav-links li a, .product-description p, .product-description button, .place-order label {
         font-size: calc(var(--size-20)*0.8);
@@ -803,6 +793,10 @@ footer svg {
     .cart-container {
         padding-bottom: 3rem;
     }
+    .contact-details {
+        flex-direction: column;
+        min-width: 132px;
+    }
 }
 
 @media (max-width: 770px) {
@@ -818,9 +812,12 @@ footer svg {
     .burger {
         display: block;
     }
+    .pages {
+        display: none;
+    }
     .categories {
         flex-direction: column;
-        align-content: center;        
+        align-content: center;
         gap: 2rem;
     }
     .category {
@@ -851,11 +848,14 @@ footer svg {
     .product-description p, .product-description button {
         font-size: calc(var(--size-20)*0.7);
     }
+    footer a {
+        font-size: calc(var(--size-18)*0.8);
+    }
 }
 
 @media (max-width: 590px) {
-    footer a {
-        width: 8%;
+    .social-icons a {
+        max-width: 25px;
     }
     .languages a {
         font-size: calc(var(--size-18)*0.7);
@@ -871,9 +871,6 @@ footer svg {
     }
     .product button {
         width: 50%;
-    }
-    .contact-details {
-        gap: 2rem;
     }
     .languages, .icons {
         width: 15%;
@@ -924,6 +921,13 @@ footer svg {
         font-size: 14px;
         padding: 0.5rem;
     }
+    footer a {
+        font-size: calc(var(--size-18)*0.7);
+    }
+    .terms {
+        font-size: calc(var(--size-18)*0.6);
+        text-align: right;
+    }
 }
 
 @media (max-width: 465px) {
@@ -946,13 +950,10 @@ footer svg {
         min-width: 170px;
     }
     .product span, .product button, .buy, .place-order label {
-        font-size: calc(var(--size-20)*0.7); 
+        font-size: calc(var(--size-20)*0.7);
     }
-    .delivery-info span, .contact address, .cart-products div {
+    .delivery-info span, .cart-products div {
         font-size: calc(var(--size-18)*0.7);
-    }
-    .location-map a button {
-        font-size: calc(var(--size-18)*0.7) ;
     }
     .place-order div {
         width: 100%;
@@ -962,6 +963,16 @@ footer svg {
     }
     .go-back {
         width: 40px;
+    }
+    .social-icons {
+        flex-direction: column;
+        gap: 3px;
+    }
+    .social-icons a {
+        max-width: 20px;
+    }
+    .terms {
+        max-width: 55px;
     }
 }
 
@@ -983,5 +994,4 @@ footer svg {
     .cart-products {
         gap: 2%;
     }
-
 }

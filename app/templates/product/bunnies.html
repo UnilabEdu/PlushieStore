@@ -5,18 +5,23 @@
 <main>
     <div class="container">
         <a class="go-back" href="../..">
-            <img src="../../static/img/icons/arrow.png" alt="back arrow">
+            <img src="{{ url_for('static', filename='img/icons/arrow.png') }}" alt="back arrow">
         </a>
-        <h1 id="pageBunnies">{{ categorie.name_geo }}</h1>
+        {% if session['locale'] == 'KA' %}
+            <h1>{{ categorie.name_eng }}</h1>
+        {% else %}
+            <h1>{{ categorie.name_geo }}</h1>
+        {% endif %}
+
         <section class="bunnies">
             <ul>
                 {% for toy in toys %}
                     <li class="product">
-                    <a id="product1" href="{{ url_for('product.view_product') }}">
-                            <img src="{{ toy.photo }}" alt="{{ toy.name_eng }}">
+                    <a id="product1" href="{{ url_for('product.view_product', id=toy.id) }}">
+                            <img src="{{ url_for('static', filename='img/products/' + toy.photo) }}" alt="{{ toy.name_eng }}">
                             <div class="product-info">
                                 <span>{{ toy.price }}₾</span>
-                                <button id="buyButton1">შეძენა</button>
+                                <button id="buyButton1">{{_('შეძენა')}}</button>
                             </div>
                         </a>
                     </li>
