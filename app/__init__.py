@@ -1,6 +1,6 @@
-from flask import Flask
+from flask import Flask, session
 from app.config import Config
-from app.extensions import db, login_manager, migrate, ckeditor
+from app.extensions import db, login_manager, migrate, ckeditor, babel
 from app.commands import init_db, populate_db
 from app.views import main_blueprint, product_blueprint, auth_blueprint
 from app.admin import admin, SecureModelView, UserView, CityView, OrderView, ToyView, ToyCategoryView
@@ -49,6 +49,14 @@ def register_extensions(app):
 
     # Flask-CKEditor
     ckeditor.init_app(app)
+
+    # Flask-Babel
+    def get_locale():
+        if 'locale' not in session.keys():
+            session['locale'] = 'EN'
+        return session['locale']
+
+    babel.init_app(app, locale_selector=get_locale)
 
 
 def register_blueprints(app):

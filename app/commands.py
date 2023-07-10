@@ -3,7 +3,6 @@ from flask.cli import with_appcontext
 from app.extensions import db
 from app.models import User, Role, ToyCategory, Order, Toy
 import os
-from flask import url_for
 
 
 @click.command("init_db")
@@ -43,7 +42,6 @@ def populate_db():
     ToyCategory.save()
 
     # Toys
-
     directory = 'app/static/img/products/'
 
     for img in os.listdir(directory):
