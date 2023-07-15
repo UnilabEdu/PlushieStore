@@ -18,9 +18,9 @@
             </div>
             <div class="product-description">
                 {% if session['locale'] == 'KA' %}
-                    <p>{{ toy.desc_eng }}</p>
+                    {{ toy.desc_eng | safe }}
                 {% else %}
-                    <p>{{ toy.desc_geo }}</p>
+                    {{ toy.desc_geo | safe }}
                 {% endif %}
                 <div class="buy">
                     <span id="price">{{_('ღირებულება')}}:</span>

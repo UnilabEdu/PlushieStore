@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms.fields import StringField, PasswordField, EmailField, IntegerField, SubmitField
+from wtforms.fields import StringField, PasswordField, EmailField, IntegerField, SubmitField, RadioField
 from wtforms.validators import DataRequired, equal_to, ValidationError
 from app.models import User
 from string import digits
@@ -33,7 +33,6 @@ class RegisterForm(FlaskForm):
 
 
 class LoginForm(FlaskForm):
-    email = EmailField('იმელი', validators=[DataRequired("შეიყვანეთ იმეილი")])
+    email = EmailField('მომხმარებელი', validators=[DataRequired("შეიყვანეთ მეილი")])
     password = PasswordField('პაროლი', validators=[DataRequired("შეიყვანეთ პაროლი")])
-
     submit = SubmitField('შესვლა')

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-07-07 19:03+0400\n"
+"POT-Creation-Date: 2023-07-15 18:47+0400\n"
 "PO-Revision-Date: 2023-07-07 19:04+0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ka\n"
@@ -18,70 +18,244 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: app/templates/layouts/base.html:30
-msgid "პოპულარული"
-msgstr "Popular"
+#: app/templates/auth/login.html:5
+msgid "შესვლა"
+msgstr ""
 
-#: app/templates/layouts/base.html:31 app/templates/layouts/base.html:65
-msgid "კითხვები"
-msgstr "Questions"
+#: app/templates/auth/login.html:18
+msgid "გავეცანი დოკუმენტს"
+msgstr ""
 
-#: app/templates/layouts/base.html:39 app/templates/layouts/base.html:63
-#: app/templates/main/index.html:42
-msgid "მიტანის სერვისი"
-msgstr "Delivery service"
-
-#: app/templates/layouts/base.html:40 app/templates/layouts/base.html:64
-msgid "კონტაქტი"
-msgstr "Contact"
-
-#: app/templates/layouts/base.html:61
-msgid "ბაჭიები"
-msgstr "Bunnies"
-
-#: app/templates/layouts/base.html:62
-msgid "ცხოველები"
-msgstr "Animals"
-
-#: app/templates/layouts/base.html:71
-msgid "კალათა ცარიელია"
-msgstr "The cart is empty"
-
-#: app/templates/layouts/base.html:73
-msgid "აირჩიე ბაჭია"
-msgstr "Choose a bunny"
-
-#: app/templates/layouts/base.html:74
-msgid "აირჩიე სხვა ცხოველი"
-msgstr "Choose another animal"
-
-#: app/templates/layouts/base.html:110
+#: app/templates/auth/login.html:19 app/templates/layouts/base.html:117
+#: app/templates/main/terms.html:6
 msgid "წესები და პირობები"
 msgstr "Terms and Conditions"
 
-#: app/templates/main/index.html:25
-msgid "პოპულარული სათამაშოები"
-msgstr "Popular toys"
+#: app/templates/auth/login.html:26
+msgid "არ გაქვთ პროფილი? გაიარეთ"
+msgstr ""
 
-#: app/templates/main/index.html:34 app/templates/product/bunnies.html:19
-#: app/templates/product/product-page.html:22
+#: app/templates/auth/login.html:27
+msgid "რეგისტრაცია"
+msgstr ""
+
+#: app/templates/auth/login.html:30
+msgid "დაგავიწყდათ პაროლი"
+msgstr ""
+
+#: app/templates/auth/login.html:31
+msgid "პაროლის აღდგენა"
+msgstr ""
+
+#: app/templates/layouts/base.html:35
+msgid "პოპულარული"
+msgstr "Popular"
+
+#: app/templates/layouts/base.html:36 app/templates/layouts/base.html:78
+msgid "კითხვები"
+msgstr "Questions"
+
+#: app/templates/layouts/base.html:44 app/templates/layouts/base.html:76
+#: app/templates/main/index.html:40
+msgid "მიტანის სერვისი"
+msgstr "Delivery Service"
+
+#: app/templates/layouts/base.html:45 app/templates/layouts/base.html:77
+msgid "კონტაქტი"
+msgstr "Contact"
+
+#: app/templates/layouts/base.html:73
+msgid "ავტორიზაცია"
+msgstr "Log in"
+
+#: app/templates/layouts/base.html:74
+msgid "ბაჭიები"
+msgstr "Bunnies"
+
+#: app/templates/layouts/base.html:75
+msgid "ცხოველები"
+msgstr "Animals"
+
+#: app/templates/layouts/base.html:84
+msgid "კალათა ცარიელია"
+msgstr "Basket is empty"
+
+#: app/templates/layouts/base.html:86
+msgid "აირჩიე ბაჭია"
+msgstr "Choose bunny"
+
+#: app/templates/layouts/base.html:87
+msgid "აირჩიე სხვა ცხოველი"
+msgstr "Choose other animal"
+
+#: app/templates/main/index.html:24
+msgid "პოპულარული სათამაშოები"
+msgstr "Popular Toys"
+
+#: app/templates/main/index.html:32 app/templates/product/bunnies.html:24
+#: app/templates/product/product-page.html:30
 msgid "შეძენა"
 msgstr "Purchase"
 
-#: app/templates/main/index.html:54
+#: app/templates/main/index.html:52
 msgid ""
 "თბილისში მიტანა შესაძლებელია შეკვეთიდან მეორე დღეს. მიტანის ღირებულება "
 "ცენტრალურ უბნებში 6 ლარი, ხოლო გარეუბნებში 8 ლარია."
-msgstr "It can be delivered to Tbilisi the next day after ordering. The cost of delivery is 6 GEL in the central areas, and 8 GEL in the suburbs."
+msgstr ""
+"We are delivering in Tbilisi on a second day from ordering. Delivery "
+"price in central parts of city is 6Gel and in outskirts - 8Gel."
 
-#: app/templates/main/index.html:55
+#: app/templates/main/index.html:53
 msgid ""
 "რეგიონებში სათამაშოები იგზავნება ფოსტით. გაგზავნის ღირებულება ქალაქებში "
 "10 ლარი, ხოლო სოფლებში 12 ლარია. ამანათის ჩამოსვლის დრო დამოკიდებულია "
 "რეგიონზე."
-msgstr "In regions, toys are sent by mail. The cost of sending is 10 GEL in cities, and 12 GEL in villages. Parcel arrival time depends on the region."
+msgstr ""
+"We are sending toys in regions by post. Delivery price for towns is 10Gel"
+" and for villages 12Gel. The time of delivery depends on the address."
 
-#: app/templates/product/product-page.html:18
+#: app/templates/main/terms.html:9
+msgid ""
+"ეს წესები და პირობები არის იურიდიულად მავალდებულებელი შეთანხმება "
+"„ამიგურუმი თბილისსა“ (შემდგომში „მაღაზია“) და ყველა იმ მომხმარებელს "
+"შორის, რომელიც იძენს „მაღაზიაში“ სათამაშოს ან/და მომსახურებას (შემდგომში "
+"„მომხმარებელი“). "
+msgstr ""
+"These terms and conditions are a legally binding agreement between "
+"Amigurumi Tbilisi (hereinafter referred to as the 'Store') and all "
+"customers who purchase toys and/or services from the 'Store' (hereinafter"
+" referred to as the 'Customer')."
+
+#: app/templates/main/terms.html:12
+msgid ""
+"ამ ვებგვერდის გამოყენებით „მომხმარებელი“ ადასტურებს, რომ ეთანხმება "
+"წინამდებარე წესებსა და პირობებს."
+msgstr ""
+"The 'Customer' signifies their acceptance of these terms and conditions "
+"by using this website."
+
+#: app/templates/main/terms.html:15
+msgid "მუხლი 1"
+msgstr "Article 1"
+
+#: app/templates/main/terms.html:17
+msgid ""
+"„მაღაზიის“ ვებგვერდზე განთავსებული ლოგო, ფოტოები, პროდუქციის დიზაინი, "
+"აღწერა, სერვისები, სახელწოდება „ამიგურუმი თბილისი“ არის „მაღაზიის“ "
+"საკუთრება და დაცულია კანონით. ამრიგად, მისი გამოყენება „მომხმარებელს“ "
+"მხოლოდ პირადი მოხმარებისთვის შეუძლია და არ აქვს უფლება გადაამუშავოს, "
+"გადათარგმნოს, გაყიდოს ან/და ანაზღაურებადი მიზნებისთვის გამოიყენოს იგი."
+msgstr ""
+"The 'Store' is the rightful owner of the Logo, Photos, Product Design, "
+"Description, Services, and name 'Amigurumi Tbilisi' displayed on this "
+"website, and they are legally protected. As a result, the 'Customer' is "
+"only permitted to use it for personal use; processing, translating, "
+"selling, and/or using it for gainful employment are all prohibited."
+
+#: app/templates/main/terms.html:21
+msgid "მუხლი 2"
+msgstr "Article 2"
+
+#: app/templates/main/terms.html:23
+msgid ""
+"ამ ვებგვერდის გამოყენებით „მომხმარებელი“ ეთანხმება „მაღაზიისაგან“ მიიღოს "
+"მოკლე ტექსტური შეტყობინებები ტელეფონზე ან/და წერილები ელფოსტაზე, მის "
+"შეკვეთასთან დაკავშირებით."
+msgstr ""
+"The 'Customer' acknowledges and agrees that the 'Store' may contact them "
+"regarding their order via phone, email, and/or brief text messages."
+
+#: app/templates/main/terms.html:27
+msgid ""
+"ამ ვებგვერდზე რეგისტრაციის ან/და შეკვეთის განთავსების გზით „მაღაზიისთვის“"
+" გადმოცემული პერსონალური ინფორმაციის (შემდგომში „პერსონალური ინფორმაცია“)"
+" უსაფრთხოებაზე პასუხისმგებელია „მაღაზია“;"
+msgstr ""
+"The 'Store' is in charge of protecting the privacy of any personal data "
+"(hereafter referred to as 'Personal Information') that 'Customers' give "
+"us when registering and/or making purchases on this website;"
+
+#: app/templates/main/terms.html:30
+msgid ""
+"„მაღაზია“ უფლებამოსილია დაამუშავოს „პერსონალური ინფორმაცია“, გაუგზავნოს "
+"„პერსონალური ინფორმაციის“ მფლობელს სარეკლამო შეტყობინებები მობილურ "
+"ტელეფონზე და ელ-ფოსტაზე."
+msgstr ""
+"'Store' is permitted to process 'Personal Information' and to send email "
+"and mobile advertising messages to the owner of 'Personal information'."
+
+#: app/templates/main/terms.html:33
+msgid ""
+"„მაღაზია“ უფლებამოსილია დაამუშავოს „პერსონალური ინფორმაცია“ პერსონალურ "
+"მონაცემთა დაცვის შესახებ საქართველოს კანონის მიხედვით;"
+msgstr ""
+"In accordance with Georgian law governing the protection of personal "
+"data, 'Store' is permitted to process 'Personal Information'."
+
+#: app/templates/main/terms.html:36
+msgid ""
+"„მაღაზია“ უფლებას იტოვებს საქართველოს კანონმდებლობის მოთხოვნით ან/და "
+"სამართლებრივ დავებში საკუთარი ინტერესების დასაცავად, ან/და „მაღაზიის“ "
+"რეორგანიზაციის, შერწყმის ან გაყიდვის შედეგად გადასცეს „პერსონალური "
+"ინფორმაცია“ მესამე პირებს;"
+msgstr ""
+"'Store' reserves the right to disclose 'Personal information' to third "
+"parties in accordance with Georgian law, to defend its own rights in "
+"legal proceedings, or in the event of 'Store's' reorganization, merger, "
+"or sale;"
+
+#: app/templates/main/terms.html:39
+msgid "მუხლი 3"
+msgstr "Article 3"
+
+#: app/templates/main/terms.html:41
+msgid ""
+"„მომხმარებელი“ პასუხისმგებელია შეკვეთის განთავსებისას მის მიერ მოწოდებული"
+" ინფორმაციის სისწორეზე. ამ ინფორმაციაში ხარვეზის გამო არასწორად "
+"შესრულებულ შეკვეთაზე პასუხისმგებელია თავად „მომხმარებელი“ და არა "
+"„მაღაზია“;"
+msgstr ""
+"The 'Customer' is accountable for the accuracy of the data they wrote "
+"while placing the order. If an order is improperly executed as a result "
+"of an inaccuracy in this information, it is the 'Customer' and not the "
+"'Store' who is responsible;"
+
+#: app/templates/main/terms.html:45
+msgid ""
+"„მომხმარებელი“ უფლებამოსილია გააუქმოს შეკვეთა ამ შეკვეთის მიტანის "
+"თარიღამდე 1 (ერთი) კალენდარული დღით ადრე მაინც, თუმცა თუკი შეკვეთა ამ "
+"დროისთვის უკვე გამოგზავნილია „მაღაზიის“ მიერ, მაშინ „მომხმარებელს“ თანხა "
+"დაუბრუნდება შეკვეთის მიტანის და უკან დაბრუნების თანხის გამოკლებით, "
+"„მაღაზიის“ მიერ შეკვეთის უკან მიღებიდან 5 (ხუთი) სამუშაო დღის "
+"განმავლობაში."
+msgstr ""
+"The 'Customer' has the option to cancel the order up to 1 (one) calendar "
+"day prior to the date it is scheduled to be delivered; however, if the "
+"'Store' has already sent the order by this moment, the amount will be "
+"refunded to the 'Customer' less the cost of delivery and return, in 5 "
+"(five) working days."
+
+#: app/templates/main/terms.html:48
+msgid "მუხლი 4"
+msgstr "Article 4"
+
+#: app/templates/main/terms.html:50
+msgid ""
+"ამ წესებისა და პირობების შესრულების ადგილია „მაღაზიის“ იურიდიული "
+"მისამართი;"
+msgstr ""
+"The legal address of the 'Store' shall be the site of execution of these "
+"terms and conditions;"
+
+#: app/templates/main/terms.html:54
+msgid ""
+"ამ წესებისა და პირობების რომელიმე პუნქტის ან მუხლის ბათილობა დანარჩენი "
+"პუნქტებისა და მუხლების ბათილობას არ გამოიწვევს."
+msgstr ""
+"The invalidity of one or more provisions of these terms and conditions "
+"shall not affect the validity of the others that remain in effect."
+
+#: app/templates/product/product-page.html:26
 msgid "ღირებულება"
-msgstr "Cost"
+msgstr "Price"
 

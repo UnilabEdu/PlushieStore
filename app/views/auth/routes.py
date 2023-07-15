@@ -24,26 +24,30 @@ def register():
     return render_template("register.html", form=form)
 
 
-@auth_blueprint.route("/login", methods=['GET','POST'])
+@auth_blueprint.route("/login", methods=['GET', 'POST'])
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        user = User.query.filter_by(email=form.email.data).first()
-        if not user:
-            flash("მომხმარებელი ვერ მოიძებნა")
-            return redirect(url_for("auth.login"))
+        checked = request.form.get('remember')
+        if checked == "on":
+            user = User.query.filter_by(email=form.email.data).first()
+            if not user:
+                flash("მომხმარებელი ვერ მოიძებნა")
+                return redirect(url_for("auth.login"))
 
-        if user.check_password(form.password.data):
-            login_user(user)
-            next = request.args.get('next')
-            if next:
-                return redirect(next)
-            elif user.role_id == 1:
-                return redirect('/admin/order/')
+            if user.check_password(form.password.data):
+                login_user(user)
+                next = request.args.get('next')
+                if next:
+                    return redirect(next)
+                elif user.role_id == 1:
+                    return redirect('/admin/order/')
+                else:
+                    return redirect(url_for("main.home"))
             else:
-                return redirect(url_for("main.home"))
+                flash("პაროლი არასწორია")
         else:
-            flash("პაროლი არასწორია")
+            flash("გაეცანით დოკუმენტს, სავალდებულოა")
     return render_template("login.html", form=form)
 
 

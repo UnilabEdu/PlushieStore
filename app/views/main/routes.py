@@ -14,6 +14,16 @@ def home():
     return render_template("index.html", categories=categories, toys=toys)
 
 
+@main_blueprint.route("/terms")
+def terms():
+    return render_template("terms.html")
+
+
+@main_blueprint.route("/questions")
+def questions():
+    return render_template("questions.html")
+
+
 @main_blueprint.route("/change_ln")
 def change_language():
     if session['locale'] == 'EN':

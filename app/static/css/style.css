@@ -44,7 +44,7 @@ body {
     margin: 0;
     font-size: 100px;
     color: rgba(225,225,225, .01);
-    background-image: url(../img/backgrounds/bunnies-background.png);
+    background-image: url(../img/backgrounds/clouds.jpg);
     background-repeat: repeat;
     -webkit-background-clip: text;
     text-align: center;
@@ -54,16 +54,16 @@ body {
 }
     @keyframes move {
       0%, 100% {
-        background-position: left top;
+        background-position: right top;
       }
       25%{
-        background-position: right bottom;
+        background-position: left bottom;
        }
       50% {
-        background-position: left bottom;
+        background-position: left top;
       }
       75% {
-        background-position: right top;
+        background-position: right bottom;
       }
   }
 
@@ -124,27 +124,27 @@ header {
     position: relative;
 }
 
-.languages {
-    width: 7%;
+.languages, .icons {
+    width: 12%;
     display: flex;
     align-content: center;
-    justify-content: space-between;
+    gap: 20%;
 }
 
-.languages svg {
-    height: 17.6px;
-    width: fit-content;
+.languages {
+    justify-content: flex-start;
 }
 
 .icons {
-    width: 7%;
-    display: flex;
-    align-content: center;
     justify-content: flex-end;
 }
 
 .icons a {
-    height: 15%;
+    height: 24px;
+}
+
+.languages svg {
+    height: 17.6px;
     width: fit-content;
 }
 
@@ -359,6 +359,7 @@ h3, h2 {
 }
 
 footer {
+    width: 100%;
     background-color: var(--background-color);
     max-height: 70px;
     min-height: 70px;
@@ -689,7 +690,87 @@ footer a {
     width: 100%;
 }
 
+.terms-and-conditions {
+    margin-bottom: 2rem;
+}
+
+.terms-and-conditions li {
+    margin-top: 1rem;
+    font-family: var(--main-font-ge);
+    font-size: var(--size-18);
+    text-align: justify;
+}
+.terms-and-conditions span {
+    display: block;
+}
+
+.login-container {
+    padding: 10% 0 12%;
+}
+
+.authorize {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1rem;
+}
+
+.authorize div {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.authorize label, .submit {
+    font-family: var(--main-font-ge);
+    font-size: var(--size-18);
+}
+
+.calltoaction {
+    padding: 0.5rem 0;
+    text-align: center;
+    font-family: var(--main-font-ge);
+    font-size: 16px;
+}
+
+.authorize input {
+    padding: 0 1rem;
+    height: 2rem;
+    border-radius: 20px;
+}
+
+.submit {
+    width: 30%;
+    height: 2rem;
+    border: 2px solid var(--text-color);
+    border-radius: 20px;
+    background-color: var(--background-color);
+    cursor: pointer;
+}
+
+.login-btn {
+    align-content: center;
+    cursor: pointer;
+}
+
+.confirm-terms {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.confirm-terms span, .confirm-terms a {
+    padding: 0 0.5rem;
+    align-self: center;
+}
+
 @media (max-width: 1192px) {
+    .pages {
+        min-width: 270px;
+        gap: 7%;
+    }
     h3, h2 {
         font-size: calc(var(--size-30)*0.85) ;
     }
@@ -705,8 +786,8 @@ footer a {
 }
 
 @media (max-width: 1035px) {
-    .logo a {
-        width: 90%;
+    .logo {
+        width: 100px;
     }
     .header-container {
         padding: 1rem 2rem;
@@ -737,13 +818,13 @@ footer a {
         font-size: calc(var(--size-30)*0.7) ;
     }
     .pages {
-        min-width: 240px;
+        min-width: 210px;
     }
     .languages a, .pages a {
         font-size: calc(var(--size-18)*0.9);
     }
     .icons a {
-        height: 11%;
+        height: 21px;
     }
     .delivery-info svg {
         display: none;
@@ -760,6 +841,12 @@ footer a {
 }
 
 @media (max-width: 912px) {
+    .logo {
+        width: 90px;
+    }
+    .languages a, .pages a {
+        font-size: calc(var(--size-18)*0.85);
+    }
     .container, .header-container, .main-container, footer nav {
         padding: 1rem 2rem;
     }
@@ -797,16 +884,13 @@ footer a {
         flex-direction: column;
         min-width: 132px;
     }
+    .icons a {
+        height: 18px;
+    }
 }
 
 @media (max-width: 770px) {
-    .icons {
-        justify-content: space-between;
-    }
-    .icons a {
-        height: 13%;
-    }
-    .cart div {
+    .cart div, .profile {
         display: none;
     }
     .burger {
@@ -860,6 +944,9 @@ footer a {
     .languages a {
         font-size: calc(var(--size-18)*0.7);
     }
+    .icons a {
+        height: 16px;
+    }
     .animation {
         padding: 28% 10%;;
     }
@@ -873,7 +960,7 @@ footer a {
         width: 50%;
     }
     .languages, .icons {
-        width: 15%;
+        width: 20%;
     }
     .bunnies ul, .other-animals ul {
         grid-template-columns: 1fr;
@@ -979,6 +1066,9 @@ footer a {
 @media (max-width: 350px) {
     .languages a {
         font-size: calc(var(--size-18)*0.6);
+    }
+    .icons a {
+        height: 14px;
     }
     .burger div {
         height: 1.5px;
