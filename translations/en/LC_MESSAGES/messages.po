@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-07-15 18:47+0400\n"
+"POT-Creation-Date: 2023-07-18 00:39+0400\n"
 "PO-Revision-Date: 2023-07-07 19:11+0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,73 +18,109 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: app/templates/auth/login.html:5
+#: app/templates/auth/login.html:5 app/templates/auth/login.html:17
 msgid "შესვლა"
 msgstr "შესვლა"
 
-#: app/templates/auth/login.html:18
+#: app/templates/auth/login.html:9
+msgid "მომხმარებელი"
+msgstr "მომხმარებელი"
+
+#: app/templates/auth/login.html:13
+#, fuzzy
+msgid "პაროლი"
+msgstr "პაროლი"
+
+#: app/templates/auth/login.html:21
+msgid "არ გაქვთ პროფილი? გაიარეთ"
+msgstr "არ გაქვთ პროფილი? გაიარეთ"
+
+#: app/templates/auth/login.html:22 app/templates/auth/register.html:5
+#: app/templates/auth/register.html:34
+msgid "რეგისტრაცია"
+msgstr "რეგისტრაცია"
+
+#: app/templates/auth/login.html:25
+msgid "დაგავიწყდათ პაროლი"
+msgstr "დაგავიწყდათ პაროლი"
+
+#: app/templates/auth/login.html:26 app/templates/auth/reset-password.html:5
+msgid "პაროლის აღდგენა"
+msgstr "პაროლის აღდგენა"
+
+#: app/templates/auth/register.html:13
+msgid "ტელეფონის ნომერი"
+msgstr "ტელეფონის ნომერი"
+
+#: app/templates/auth/register.html:17
+msgid "სახელი და გვარი"
+msgstr "სახელი და გვარი"
+
+#: app/templates/auth/register.html:21
+msgid "სასურველი პაროლი"
+msgstr "სასურველი პაროლი"
+
+#: app/templates/auth/register.html:25
+#, fuzzy
+msgid "გაიმეორეთ პაროლი"
+msgstr "დაგავიწყდათ პაროლი"
+
+#: app/templates/auth/register.html:30
 msgid "გავეცანი დოკუმენტს"
 msgstr "გავეცანი დოკუმენტს"
 
-#: app/templates/auth/login.html:19 app/templates/layouts/base.html:117
+#: app/templates/auth/register.html:31 app/templates/layouts/base.html:118
 #: app/templates/main/terms.html:6
 msgid "წესები და პირობები"
 msgstr "წესები და პირობები"
 
-#: app/templates/auth/login.html:26
-msgid "არ გაქვთ პროფილი? გაიარეთ"
-msgstr "არ გაქვთ პროფილი? გაიარეთ"
+#: app/templates/auth/reset-password.html:8
+msgid "მიუთითეთ ელფოსტა"
+msgstr "მიუთითეთ ელფოსტა"
 
-#: app/templates/auth/login.html:27
-msgid "რეგისტრაცია"
-msgstr "რეგისტრაცია"
+#: app/templates/auth/reset-password.html:12
+#, fuzzy
+msgid "აღდგენა"
+msgstr "აღდგენა"
 
-#: app/templates/auth/login.html:30
-msgid "დაგავიწყდათ პაროლი"
-msgstr "დაგავიწყდათ პაროლი"
-
-#: app/templates/auth/login.html:31
-msgid "პაროლის აღდგენა"
-msgstr "პაროლის აღდგენა"
-
-#: app/templates/layouts/base.html:35
+#: app/templates/layouts/base.html:36
 msgid "პოპულარული"
 msgstr "პოპულარული"
 
-#: app/templates/layouts/base.html:36 app/templates/layouts/base.html:78
+#: app/templates/layouts/base.html:37 app/templates/layouts/base.html:79
 msgid "კითხვები"
 msgstr "კითხვები"
 
-#: app/templates/layouts/base.html:44 app/templates/layouts/base.html:76
+#: app/templates/layouts/base.html:45 app/templates/layouts/base.html:77
 #: app/templates/main/index.html:40
 msgid "მიტანის სერვისი"
 msgstr "მიტანის სერვისი"
 
-#: app/templates/layouts/base.html:45 app/templates/layouts/base.html:77
+#: app/templates/layouts/base.html:46 app/templates/layouts/base.html:78
 msgid "კონტაქტი"
 msgstr "კონტაქტი"
 
-#: app/templates/layouts/base.html:73
+#: app/templates/layouts/base.html:74
 msgid "ავტორიზაცია"
 msgstr "ავტორიზაცია"
 
-#: app/templates/layouts/base.html:74
+#: app/templates/layouts/base.html:75
 msgid "ბაჭიები"
 msgstr "ბაჭიები"
 
-#: app/templates/layouts/base.html:75
+#: app/templates/layouts/base.html:76
 msgid "ცხოველები"
 msgstr "ცხოველები"
 
-#: app/templates/layouts/base.html:84
+#: app/templates/layouts/base.html:85
 msgid "კალათა ცარიელია"
 msgstr "კალათა ცარიელია"
 
-#: app/templates/layouts/base.html:86
+#: app/templates/layouts/base.html:87
 msgid "აირჩიე ბაჭია"
 msgstr "აირჩიე ბაჭია"
 
-#: app/templates/layouts/base.html:87
+#: app/templates/layouts/base.html:88
 msgid "აირჩიე სხვა ცხოველი"
 msgstr "აირჩიე სხვა ცხოველი"
 

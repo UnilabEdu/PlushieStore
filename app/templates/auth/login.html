@@ -1,35 +1,39 @@
 {% extends "layouts/base.html" %}
 {% block main %}
 <main>
+
     <div class="container login-container">
         <h1>{{_('შესვლა')}}</h1>
         <form class="authorize" method="post">
             {{ form.hidden_tag() }}
             <div>
-                {{ form.email.label }}
+                <label for="email">{{_("მომხმარებელი")}}</label>
                 {{ form.email }}
+                <div>
+                    {{ error_msg.email }}
+                </div>
             </div>
             <div>
-                {{ form.password.label }}
+                <label for="password">{{_("პაროლი")}}</label>
                 {{ form.password }}
+                <div>
+                    {{ error_msg.password }}
+                </div>
             </div>
-            <label class="confirm-terms">
-                <input type="checkbox" name="remember">
-                <span>{{_('გავეცანი დოკუმენტს')}}:</span>
-                <a href="{{ url_for('main.terms') }}">{{_('წესები და პირობები')}}</a>
-            </label>
             <div class="login-btn">
-                {{ form.submit(class='submit') }}
+                <button type="submit">{{_("შესვლა")}}</button>
             </div>
         </form>
         <div class="calltoaction">
             <span>{{_('არ გაქვთ პროფილი? გაიარეთ')}}</span>
             <a href="{{url_for('auth.register')}}">{{_('რეგისტრაცია')}}</a>
         </div>
+        {% if form.errors %}
         <div class="calltoaction">
             <span>{{_('დაგავიწყდათ პაროლი')}}? </span>
-            <a href="{{url_for('auth.register')}}">{{_('პაროლის აღდგენა')}}</a>
+            <a href="{{url_for('auth.reset_password')}}">{{_('პაროლის აღდგენა')}}</a>
         </div>
+        {% endif %}
     </div>
 </main>
 {% endblock %}

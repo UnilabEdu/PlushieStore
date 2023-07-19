@@ -31,10 +31,10 @@ def populate_db():
     admin_user.create()
 
     # Toy Categorys
-    toy_category1 = ToyCategory(photo='bunny-category-cover.jpg', name_geo="ბაჭიები", name_eng="bunny",
+    toy_category1 = ToyCategory(photo='bunny-category-cover.jpg', name_geo="ბაჭიები", name_eng="bunnies",
                                 description_geo="ბაჭიები",
                                 description_eng="bunnys")
-    toy_category2 = ToyCategory(photo='leo-category-cover.jpg', name_geo="სხვა ცხოველები", name_eng="other animals",
+    toy_category2 = ToyCategory(photo='leo-category-cover.jpg', name_geo="სხვა ცხოველები", name_eng="animals",
                                 description_geo="სხვა ცხოველები",
                                 description_eng="other animals")
     toy_category1.create(commit=False)

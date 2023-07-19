@@ -1,4 +1,55 @@
 {% extends "layouts/base.html" %}
 {% block main %}
-
+<main>
+    <div class="container login-container">
+        <h1>{{_("რეგისტრაცია")}}</h1>
+        <form class="authorize" method="post">
+            {{ form.hidden_tag() }}
+            <div>
+                <label for="email">{{_("ელფოსტა")}}</label>
+                {{ form.email }}
+                <div>
+                    {{ error_msg.email }}
+                </div>
+            </div>
+            <div>
+                <label for="phone_number">{{_("ტელეფონის ნომერი")}}</label>
+                {{ form.phone_number }}
+            </div>
+            <div>
+                <label for="fullname">{{_("სახელი და გვარი")}}</label>
+                {{ form.fullname }}
+                <div>
+                    {{ error_msg.fullname }}
+                </div>
+            </div>
+            <div>
+                <label for="password">{{_("სასურველი პაროლი")}}</label>
+                {{ form.password }}
+                <div>
+                    {{ error_msg.password }}
+                </div>
+            </div>
+            <div>
+                <label for="confirm_password">{{_("გაიმეორეთ პაროლი")}}</label>
+                {{ form.confirm_password }}
+                <div>
+                    {{ error_msg.confirm_password}}
+                </div>
+            </div>
+            <label class="confirm-terms">
+                <input type="checkbox" checked="checked" name="remember">
+                <span>{{_("გავეცანი დოკუმენტს")}}:</span>
+                <a href="{{ url_for('main.terms') }}">{{_("წესები და პირობები")}}</a>
+            </label>
+            <div class="login-btn">
+                <button type="submit">{{_("რეგისტრაცია")}}</button>
+            </div>
+        </form>
+        <div class="calltoaction">
+            <span>{{_("უკვე გაქვთ პროფილი")}}?</span>
+            <a href="{{ url_for('auth.login') }}">{{_("შესვლა")}}</a>
+        </div>
+    </div>
+</main>
 {% endblock %}

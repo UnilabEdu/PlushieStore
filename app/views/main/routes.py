@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, session, url_for, redirect, request
+from flask import Blueprint, render_template, session, redirect, request
 from app.config import Config
 from os import path
 from app.models import ToyCategory, Toy

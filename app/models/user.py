@@ -28,6 +28,9 @@ class User(db.Model, BaseModel, UserMixin):
     def check_password(self, password):
         return check_password_hash(self.password, password)
 
+    def __repr__(self):
+        return self.last_name
+
 
 class Role(db.Model, BaseModel):
     __tablename__ = "roles"

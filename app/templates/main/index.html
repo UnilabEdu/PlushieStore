@@ -12,9 +12,9 @@
                 <a href="{{ url_for('product.category', category_id=category.id) }}">
                     <img src="{{ url_for('static', filename='img/covers/' + category.photo) }}" alt="pink bunny toy">
                     {% if session['locale'] == 'KA' %}
-                    <h3>{{ category.name_eng }}</h3>
+                        <h3>{{ category.name_eng }}</h3>
                     {% else %}
-                    <h3>{{ category.name_geo }}</h3>
+                        <h3>{{ category.name_geo }}</h3>
                     {% endif %}
                 </a>
             </div>
