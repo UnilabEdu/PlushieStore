@@ -63,6 +63,28 @@ def logout():
 @auth_blueprint.route("/reset-password", methods=['POST', 'GET'])
 def reset_password():
     if request.method == "POST":
-        user = User.query.get(current_user.id)
+        email = request.form.get('umail')
+        user = User.query.filter_by(email=email).first()
+        if user:
+            return redirect(url_for('auth.reset_pass_positive'))
+        else:
+            return redirect(url_for('auth.reset_pass_negative'))
 
     return render_template("reset-password.html")
+
+
+@auth_blueprint.route("/reset-password-negative", methods=['POST', 'GET'])
+def reset_pass_negative():
+    if request.method == "POST":
+        email = request.form.get('umail')
+        user = User.query.filter_by(email=email).first()
+        if user:
+            return redirect(url_for('auth.reset_pass_positive'))
+        else:
+            return redirect(url_for('auth.reset_pass_negative'))
+    return render_template("reset-password-result-negative.html")
+
+
+@auth_blueprint.route("/reset-password-positive")
+def reset_pass_positive():
+    return render_template("reset-password-result-positive.html")

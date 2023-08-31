@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-07-18 00:50+0400\n"
+"POT-Creation-Date: 2023-08-30 17:37+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: app/templates/auth/login.html:5 app/templates/auth/login.html:17
-#: app/templates/auth/register.html:39
+#: app/templates/auth/login.html:5 app/templates/auth/login.html:28
+#: app/templates/auth/register.html:57
 msgid "შესვლა"
 msgstr ""
 
@@ -26,24 +26,24 @@ msgstr ""
 msgid "მომხმარებელი"
 msgstr ""
 
-#: app/templates/auth/login.html:13
+#: app/templates/auth/login.html:16
 msgid "პაროლი"
 msgstr ""
 
-#: app/templates/auth/login.html:21
+#: app/templates/auth/login.html:32
 msgid "არ გაქვთ პროფილი? გაიარეთ"
 msgstr ""
 
-#: app/templates/auth/login.html:22 app/templates/auth/register.html:5
-#: app/templates/auth/register.html:34
+#: app/templates/auth/login.html:33 app/templates/auth/register.html:5
+#: app/templates/auth/register.html:52
 msgid "რეგისტრაცია"
 msgstr ""
 
-#: app/templates/auth/login.html:25
+#: app/templates/auth/login.html:37
 msgid "დაგავიწყდათ პაროლი"
 msgstr ""
 
-#: app/templates/auth/login.html:26 app/templates/auth/reset-password.html:5
+#: app/templates/auth/login.html:38 app/templates/auth/reset-password.html:5
 msgid "პაროლის აღდგენა"
 msgstr ""
 
@@ -51,32 +51,32 @@ msgstr ""
 msgid "ელფოსტა"
 msgstr ""
 
-#: app/templates/auth/register.html:13
+#: app/templates/auth/register.html:16
 msgid "ტელეფონის ნომერი"
 msgstr ""
 
-#: app/templates/auth/register.html:17
+#: app/templates/auth/register.html:20
 msgid "სახელი და გვარი"
 msgstr ""
 
-#: app/templates/auth/register.html:21
+#: app/templates/auth/register.html:27
 msgid "სასურველი პაროლი"
 msgstr ""
 
-#: app/templates/auth/register.html:25
+#: app/templates/auth/register.html:37
 msgid "გაიმეორეთ პაროლი"
 msgstr ""
 
-#: app/templates/auth/register.html:30
+#: app/templates/auth/register.html:48
 msgid "გავეცანი დოკუმენტს"
 msgstr ""
 
-#: app/templates/auth/register.html:31 app/templates/layouts/base.html:118
+#: app/templates/auth/register.html:49 app/templates/layouts/base.html:118
 #: app/templates/main/terms.html:6
 msgid "წესები და პირობები"
 msgstr ""
 
-#: app/templates/auth/register.html:38
+#: app/templates/auth/register.html:56
 msgid "უკვე გაქვთ პროფილი"
 msgstr ""
 
@@ -84,7 +84,7 @@ msgstr ""
 msgid "მიუთითეთ ელფოსტა"
 msgstr ""
 
-#: app/templates/auth/reset-password.html:12
+#: app/templates/auth/reset-password.html:13
 msgid "აღდგენა"
 msgstr ""
 
@@ -149,6 +149,107 @@ msgid ""
 "რეგიონებში სათამაშოები იგზავნება ფოსტით. გაგზავნის ღირებულება ქალაქებში "
 "10 ლარი, ხოლო სოფლებში 12 ლარია. ამანათის ჩამოსვლის დრო დამოკიდებულია "
 "რეგიონზე."
+msgstr ""
+
+#: app/templates/main/questions.html:6
+msgid "ხშირად დასმული კითხვები"
+msgstr ""
+
+#: app/templates/main/questions.html:8
+msgid "სად ხართ ტერიტორიულად?"
+msgstr ""
+
+#: app/templates/main/questions.html:9
+msgid ""
+"ამჟამად ჩვენი მაღაზია მხოლოდ ონლაინ მუშაობს. სათამაშოებს თბილისში, სახლში"
+" ვამზადებთ და სასურველ ლოკაციებზე მიტანის სერვისით ვგზავნით."
+msgstr ""
+
+#: app/templates/main/questions.html:12
+msgid "რა მასალისაგან მზადდება სათამაშოები?"
+msgstr ""
+
+#: app/templates/main/questions.html:13
+msgid ""
+"სათამაშოებს ვამზადებთ ანტიალერგიული პლუშის ძაფებისაგან, ძირითადად "
+"Himalaya-ს ფირმის, რომელიც ერთ-ერთ ყველაზე ხარისხიან ძაფად მიიჩნევა. "
+"აღნიშნული ძაფები უსაფრთხოა თქვენი პატარებისათვის."
+msgstr ""
+
+#: app/templates/main/questions.html:16
+msgid "როგორ შევუკვეთო სათამაშო?"
+msgstr ""
+
+#: app/templates/main/questions.html:17
+msgid ""
+"შეკვეთის გასაფორმებლად შეგიძლიათ ჩვენი ვებგვერდი გამოიყენოთ. შეარჩიეთ "
+"სასურველი სათამაშო და დააჭირეთ ღილაკს შეძენა, შემდეგ კი გააფორმეთ "
+"შეკვეთა. ასევე შეგიძლიათ მოგვწეროთ ჩვენს ინსტაგრამზე ან ფეისბუქ გვერდზე."
+msgstr ""
+
+#: app/templates/main/questions.html:20
+msgid "რა დრო დასჭირდება სათამაშოს დამზადებას?"
+msgstr ""
+
+#: app/templates/main/questions.html:21
+msgid ""
+"როგორც წესი, სათამაშოს დამზადებას 2-დან 5 დღემდე ვანდომებთ. თუმცა "
+"ზოგიერთი სათამაშო შესაძლოა თქვენ მიერ შეკვეთის გაფორმების მომენტში უკვე "
+"მარაგში იყოს და შესაბამისად ეს დრო არ დასჭირდეს."
+msgstr ""
+
+#: app/templates/main/questions.html:24
+msgid "როგორ მუშაობს მიტანის სერვისი?"
+msgstr ""
+
+#: app/templates/main/questions.html:25
+msgid ""
+"შეკვეთის ვებგვერდზე გაფორმებისას შეგიძლიათ აირჩიოთ სასურველი მიტანის "
+"თარიღი მოცემული ვარიანტებიდან. საქმე იმაშია, რომ თითოეული სათამაშოს "
+"დამზადებას გარკვეული დრო სჭირდება. ეს დრო განსხვავებულია სათამაშოს ზომისა"
+" და სირთულის მიხედვით, საშუალოდ 2-5 დღე. როგორც კი სათამაშო დამზადდება, "
+"მიტანის სერვისი თბილისში მეორე დღესვე მოგიტანთ შეკვეთას. რეგიონებში კი "
+"საქართველოს ფოსტით ვგზავნით და ამ შემთხვევაში მოტანის შესაძლოა დაახლოებით"
+" 1 კვირა დასჭირდეს. თუკი რეგიონში გნებავთ, გთხოვთ წინასწარ დაგვეკონტაქტეთ"
+" ჩვენს ფეისბუქ ან ინსტაგრამ გვერდზე, რათა უფრო დეტალურად შეგატყობინოთ "
+"მოტანის ვადა."
+msgstr ""
+
+#: app/templates/main/questions.html:28
+msgid "როგორ გადავიხადო შეკვეთის ღირებულება?"
+msgstr ""
+
+#: app/templates/main/questions.html:29
+msgid ""
+"შეკვეთის თანხის გადახდა, ვებგვერდზე შეკვეთის განთავსებისას, ვიზა ან "
+"მასტერქარდის საბანკო ბარათით არის შესაძლებელი. ასევე შეგიძლიათ "
+"გადმორიცხოთ ჩვენს თიბისი ან საქართველოს ბანკის ანგარიშზე, რა შემთხვევაშიც"
+" გთხოვთ დანიშნულებაში მიუთითეთ შეკვეთის ნომერი."
+msgstr ""
+
+#: app/templates/main/questions.html:32
+msgid "თანხის ხელზე გადახდა შესაძლებელია?"
+msgstr ""
+
+#: app/templates/main/questions.html:33
+msgid ""
+"ამ ეტაპზე, სამწუხაროდ, საკუთარი კურიერი არ გვყავს, მიტანის სერვისს სხვა "
+"კომპანია უზრუნველყოფს, ამიტომ სათამაშოს თანხის ხელზე გადახდა შესაძლებელი "
+"არ არის. თუმცა შეგიძლიათ მიტანის სერვისის თანხა გადაუხადოთ ხელზე კურიერს,"
+" თუკი ასე გირჩევნიათ."
+msgstr ""
+
+#: app/templates/main/questions.html:36
+msgid "ინდივიდუალურ შეკვეთებს იღებთ?"
+msgstr ""
+
+#: app/templates/main/questions.html:37
+msgid ""
+"ინდივიდუალური სათამაშოს შეკვეთა შესაძლებელია, იმ შემთხვევაში, თუკი "
+"შევძლებთ თქვენი სასურველი სათამაშოს სქემის მოპოვებას ან შექმნას. გთხოვთ "
+"წინასწარ, სასურველ თარიღამდე სულ მცირე 10 დღით ადრე დაგვიკავშირდეთ ჩვენს "
+"ინსტაგრამ ან ფეისბუქ გვერდზე და გვაჩვენოთ სასურველი სათამაშო, რა "
+"შემთხვევაშიც დაგიზუსტებთ რამდენად შეგვიძლია მისი მოქსოვა."
 msgstr ""
 
 #: app/templates/main/terms.html:9

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-07-18 00:39+0400\n"
+"POT-Creation-Date: 2023-08-30 17:37+0400\n"
 "PO-Revision-Date: 2023-07-07 19:04+0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ka\n"
@@ -18,70 +18,76 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: app/templates/auth/login.html:5 app/templates/auth/login.html:17
+#: app/templates/auth/login.html:5 app/templates/auth/login.html:28
+#: app/templates/auth/register.html:57
 msgid "შესვლა"
-msgstr "shesvla"
+msgstr "Login"
 
 #: app/templates/auth/login.html:9
 msgid "მომხმარებელი"
-msgstr "momxmarebeli"
+msgstr "User"
 
-#: app/templates/auth/login.html:13
-#, fuzzy
+#: app/templates/auth/login.html:16
 msgid "პაროლი"
-msgstr "paroli"
+msgstr "Password"
 
-#: app/templates/auth/login.html:21
+#: app/templates/auth/login.html:32
 msgid "არ გაქვთ პროფილი? გაიარეთ"
-msgstr "ar gaqvt profili? gaiaret"
+msgstr "Don't have an account yet?"
 
-#: app/templates/auth/login.html:22 app/templates/auth/register.html:5
-#: app/templates/auth/register.html:34
+#: app/templates/auth/login.html:33 app/templates/auth/register.html:5
+#: app/templates/auth/register.html:52
 msgid "რეგისტრაცია"
-msgstr "registracia"
+msgstr "Register here"
 
-#: app/templates/auth/login.html:25
+#: app/templates/auth/login.html:37
 msgid "დაგავიწყდათ პაროლი"
-msgstr "dagaviwydat paroli"
+msgstr "Forgot password"
 
-#: app/templates/auth/login.html:26 app/templates/auth/reset-password.html:5
+#: app/templates/auth/login.html:38 app/templates/auth/reset-password.html:5
 msgid "პაროლის აღდგენა"
-msgstr "parolis agdgena"
+msgstr "Reset Password"
 
-#: app/templates/auth/register.html:13
+#: app/templates/auth/register.html:9
+msgid "ელფოსტა"
+msgstr "Write your email"
+
+#: app/templates/auth/register.html:16
 msgid "ტელეფონის ნომერი"
-msgstr "telefonis nomeri"
+msgstr "Phone number"
 
-#: app/templates/auth/register.html:17
+#: app/templates/auth/register.html:20
 msgid "სახელი და გვარი"
-msgstr "saxeli da gvari"
+msgstr "Full name"
 
-#: app/templates/auth/register.html:21
+#: app/templates/auth/register.html:27
 msgid "სასურველი პაროლი"
-msgstr "sasurveli paroli"
+msgstr "Create a password"
 
-#: app/templates/auth/register.html:25
-#, fuzzy
+#: app/templates/auth/register.html:37
 msgid "გაიმეორეთ პაროლი"
-msgstr "gaimeoret paroli"
+msgstr "Repeat the password"
 
-#: app/templates/auth/register.html:30
+#: app/templates/auth/register.html:48
 msgid "გავეცანი დოკუმენტს"
-msgstr "gaecani dokuments"
+msgstr "I agree to"
 
-#: app/templates/auth/register.html:31 app/templates/layouts/base.html:118
+#: app/templates/auth/register.html:49 app/templates/layouts/base.html:118
 #: app/templates/main/terms.html:6
 msgid "წესები და პირობები"
 msgstr "Terms and Conditions"
 
+#: app/templates/auth/register.html:56
+msgid "უკვე გაქვთ პროფილი"
+msgstr "Don't have an account yet?"
+
 #: app/templates/auth/reset-password.html:8
 msgid "მიუთითეთ ელფოსტა"
-msgstr "miutitet elfosta"
+msgstr "Write your email"
 
-#: app/templates/auth/reset-password.html:12
-#, fuzzy
+#: app/templates/auth/reset-password.html:13
 msgid "აღდგენა"
-msgstr "parolis agdgena"
+msgstr "Reset Password"
 
 #: app/templates/layouts/base.html:36
 msgid "პოპულარული"
@@ -149,6 +155,137 @@ msgid ""
 msgstr ""
 "We are sending toys in regions by post. Delivery price for towns is 10Gel"
 " and for villages 12Gel. The time of delivery depends on the address."
+
+#: app/templates/main/questions.html:6
+msgid "ხშირად დასმული კითხვები"
+msgstr "Frequently Asked Questions"
+
+#: app/templates/main/questions.html:8
+msgid "სად ხართ ტერიტორიულად?"
+msgstr "Where are you located?"
+
+#: app/templates/main/questions.html:9
+msgid ""
+"ამჟამად ჩვენი მაღაზია მხოლოდ ონლაინ მუშაობს. სათამაშოებს თბილისში, სახლში"
+" ვამზადებთ და სასურველ ლოკაციებზე მიტანის სერვისით ვგზავნით."
+msgstr ""
+"Currently, our store works only online. We prepare the toys at home in "
+"Tbilisi and send them to desired locations with a delivery service."
+
+#: app/templates/main/questions.html:12
+msgid "რა მასალისაგან მზადდება სათამაშოები?"
+msgstr "What are the toys made of?"
+
+#: app/templates/main/questions.html:13
+msgid ""
+"სათამაშოებს ვამზადებთ ანტიალერგიული პლუშის ძაფებისაგან, ძირითადად "
+"Himalaya-ს ფირმის, რომელიც ერთ-ერთ ყველაზე ხარისხიან ძაფად მიიჩნევა. "
+"აღნიშნული ძაფები უსაფრთხოა თქვენი პატარებისათვის."
+msgstr ""
+"We make toys from anti-allergic plush yarns, mainly Himalaya, which is "
+"considered one of the highest quality yarn. These yarns are safe for "
+"children."
+
+#: app/templates/main/questions.html:16
+msgid "როგორ შევუკვეთო სათამაშო?"
+msgstr "How can I order a toy?"
+
+#: app/templates/main/questions.html:17
+msgid ""
+"შეკვეთის გასაფორმებლად შეგიძლიათ ჩვენი ვებგვერდი გამოიყენოთ. შეარჩიეთ "
+"სასურველი სათამაშო და დააჭირეთ ღილაკს შეძენა, შემდეგ კი გააფორმეთ "
+"შეკვეთა. ასევე შეგიძლიათ მოგვწეროთ ჩვენს ინსტაგრამზე ან ფეისბუქ გვერდზე."
+msgstr ""
+"You can use our website to place an order. Select the desired toy and "
+"click the buy button, then complete the order. You can also message us on"
+" our Instagram or Facebook page."
+
+#: app/templates/main/questions.html:20
+msgid "რა დრო დასჭირდება სათამაშოს დამზადებას?"
+msgstr "How long does it take to knit a toy?"
+
+#: app/templates/main/questions.html:21
+msgid ""
+"როგორც წესი, სათამაშოს დამზადებას 2-დან 5 დღემდე ვანდომებთ. თუმცა "
+"ზოგიერთი სათამაშო შესაძლოა თქვენ მიერ შეკვეთის გაფორმების მომენტში უკვე "
+"მარაგში იყოს და შესაბამისად ეს დრო არ დასჭირდეს."
+msgstr ""
+"Usually it takes 2 to 5 days to make a toy. However, some toys may "
+"already be in stock at the time you place your order, so it may not take "
+"that long."
+
+#: app/templates/main/questions.html:24
+msgid "როგორ მუშაობს მიტანის სერვისი?"
+msgstr "How does the delivery service work?"
+
+#: app/templates/main/questions.html:25
+msgid ""
+"შეკვეთის ვებგვერდზე გაფორმებისას შეგიძლიათ აირჩიოთ სასურველი მიტანის "
+"თარიღი მოცემული ვარიანტებიდან. საქმე იმაშია, რომ თითოეული სათამაშოს "
+"დამზადებას გარკვეული დრო სჭირდება. ეს დრო განსხვავებულია სათამაშოს ზომისა"
+" და სირთულის მიხედვით, საშუალოდ 2-5 დღე. როგორც კი სათამაშო დამზადდება, "
+"მიტანის სერვისი თბილისში მეორე დღესვე მოგიტანთ შეკვეთას. რეგიონებში კი "
+"საქართველოს ფოსტით ვგზავნით და ამ შემთხვევაში მოტანის შესაძლოა დაახლოებით"
+" 1 კვირა დასჭირდეს. თუკი რეგიონში გნებავთ, გთხოვთ წინასწარ დაგვეკონტაქტეთ"
+" ჩვენს ფეისბუქ ან ინსტაგრამ გვერდზე, რათა უფრო დეტალურად შეგატყობინოთ "
+"მოტანის ვადა."
+msgstr ""
+"When placing an order, you can select the desired delivery date from the "
+"given options. Each toy takes some time to make. This time varies "
+"depending on the size and complexity of the toy. As soon as the toy is "
+"made, the delivery service will bring your order in Tbilisi the next day."
+" In the regions, we send by Georgian post, and in this case, delivery may"
+" take about 1 week. In case you need delivery service to the regions of "
+"Georgia, please contact us in advance so that we can specify the details."
+
+#: app/templates/main/questions.html:28
+msgid "როგორ გადავიხადო შეკვეთის ღირებულება?"
+msgstr "How can I pay the order?"
+
+#: app/templates/main/questions.html:29
+msgid ""
+"შეკვეთის თანხის გადახდა, ვებგვერდზე შეკვეთის განთავსებისას, ვიზა ან "
+"მასტერქარდის საბანკო ბარათით არის შესაძლებელი. ასევე შეგიძლიათ "
+"გადმორიცხოთ ჩვენს თიბისი ან საქართველოს ბანკის ანგარიშზე, რა შემთხვევაშიც"
+" გთხოვთ დანიშნულებაში მიუთითეთ შეკვეთის ნომერი."
+msgstr ""
+"When placing the order on the website, payment is possible with a Visa or"
+" Mastercard. You can also transfer the amount to our TBC or Bank of "
+"Georgia account, in which case please specify the order number in the "
+"destination."
+
+#: app/templates/main/questions.html:32
+msgid "თანხის ხელზე გადახდა შესაძლებელია?"
+msgstr "Can I pay cash upon delivery?"
+
+#: app/templates/main/questions.html:33
+msgid ""
+"ამ ეტაპზე, სამწუხაროდ, საკუთარი კურიერი არ გვყავს, მიტანის სერვისს სხვა "
+"კომპანია უზრუნველყოფს, ამიტომ სათამაშოს თანხის ხელზე გადახდა შესაძლებელი "
+"არ არის. თუმცა შეგიძლიათ მიტანის სერვისის თანხა გადაუხადოთ ხელზე კურიერს,"
+" თუკი ასე გირჩევნიათ."
+msgstr ""
+"At this stage, unfortunately, we do not have our own courier, the "
+"delivery service is provided by another company, so it is not possible to"
+" pay for the toy upon delivery. However, you can pay the delivery fee to "
+"the courier if you prefer."
+
+#: app/templates/main/questions.html:36
+msgid "ინდივიდუალურ შეკვეთებს იღებთ?"
+msgstr "Do you get individual orders?"
+
+#: app/templates/main/questions.html:37
+msgid ""
+"ინდივიდუალური სათამაშოს შეკვეთა შესაძლებელია, იმ შემთხვევაში, თუკი "
+"შევძლებთ თქვენი სასურველი სათამაშოს სქემის მოპოვებას ან შექმნას. გთხოვთ "
+"წინასწარ, სასურველ თარიღამდე სულ მცირე 10 დღით ადრე დაგვიკავშირდეთ ჩვენს "
+"ინსტაგრამ ან ფეისბუქ გვერდზე და გვაჩვენოთ სასურველი სათამაშო, რა "
+"შემთხვევაშიც დაგიზუსტებთ რამდენად შეგვიძლია მისი მოქსოვა."
+msgstr ""
+"A custom toy can be ordered if we can obtain or create a scheme for your "
+"desired toy. Please contact us in advance, at least 10 days before the "
+"desired date, on our Instagram or Facebook page and show us the desired "
+"toy, in which case we will specify if we can knit it."
 
 #: app/templates/main/terms.html:9
 msgid ""

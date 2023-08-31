@@ -33,3 +33,8 @@ def change_language():
 
     previous_url = request.referrer
     return redirect(previous_url)
+
+
+@main_blueprint.errorhandler(404)
+def page_not_found():
+    return render_template('error.html'), 404
