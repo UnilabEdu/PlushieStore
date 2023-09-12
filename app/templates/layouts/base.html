@@ -83,6 +83,8 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <p id="emptyCart">{{_('კალათა ცარიელია')}}</p>
+            <div class="added-products-list">
+            </div>
             <div>
                 <a id="bunnyButton" href="{{ url_for('product.category', category_id=1) }}">{{_('აირჩიე ბაჭია')}}</a>
                 <a id="animalButton" href="{{ url_for('product.category', category_id=2) }}">{{_('აირჩიე სხვა ცხოველი')}}</a>
