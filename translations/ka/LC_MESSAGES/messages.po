@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-07-07 19:03+0400\n"
+"POT-Creation-Date: 2023-08-30 17:37+0400\n"
 "PO-Revision-Date: 2023-07-07 19:04+0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ka\n"
@@ -18,70 +18,417 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: app/templates/layouts/base.html:30
-msgid "პოპულარული"
-msgstr "Popular"
+#: app/templates/auth/login.html:5 app/templates/auth/login.html:28
+#: app/templates/auth/register.html:57
+msgid "შესვლა"
+msgstr "Login"
 
-#: app/templates/layouts/base.html:31 app/templates/layouts/base.html:65
-msgid "კითხვები"
-msgstr "Questions"
+#: app/templates/auth/login.html:9
+msgid "მომხმარებელი"
+msgstr "User"
 
-#: app/templates/layouts/base.html:39 app/templates/layouts/base.html:63
-#: app/templates/main/index.html:42
-msgid "მიტანის სერვისი"
-msgstr "Delivery service"
+#: app/templates/auth/login.html:16
+msgid "პაროლი"
+msgstr "Password"
 
-#: app/templates/layouts/base.html:40 app/templates/layouts/base.html:64
-msgid "კონტაქტი"
-msgstr "Contact"
+#: app/templates/auth/login.html:32
+msgid "არ გაქვთ პროფილი? გაიარეთ"
+msgstr "Don't have an account yet?"
 
-#: app/templates/layouts/base.html:61
-msgid "ბაჭიები"
-msgstr "Bunnies"
+#: app/templates/auth/login.html:33 app/templates/auth/register.html:5
+#: app/templates/auth/register.html:52
+msgid "რეგისტრაცია"
+msgstr "Register here"
 
-#: app/templates/layouts/base.html:62
-msgid "ცხოველები"
-msgstr "Animals"
+#: app/templates/auth/login.html:37
+msgid "დაგავიწყდათ პაროლი"
+msgstr "Forgot password"
 
-#: app/templates/layouts/base.html:71
-msgid "კალათა ცარიელია"
-msgstr "The cart is empty"
+#: app/templates/auth/login.html:38 app/templates/auth/reset-password.html:5
+msgid "პაროლის აღდგენა"
+msgstr "Reset Password"
 
-#: app/templates/layouts/base.html:73
-msgid "აირჩიე ბაჭია"
-msgstr "Choose a bunny"
+#: app/templates/auth/register.html:9
+msgid "ელფოსტა"
+msgstr "Write your email"
 
-#: app/templates/layouts/base.html:74
-msgid "აირჩიე სხვა ცხოველი"
-msgstr "Choose another animal"
+#: app/templates/auth/register.html:16
+msgid "ტელეფონის ნომერი"
+msgstr "Phone number"
 
-#: app/templates/layouts/base.html:110
+#: app/templates/auth/register.html:20
+msgid "სახელი და გვარი"
+msgstr "Full name"
+
+#: app/templates/auth/register.html:27
+msgid "სასურველი პაროლი"
+msgstr "Create a password"
+
+#: app/templates/auth/register.html:37
+msgid "გაიმეორეთ პაროლი"
+msgstr "Repeat the password"
+
+#: app/templates/auth/register.html:48
+msgid "გავეცანი დოკუმენტს"
+msgstr "I agree to"
+
+#: app/templates/auth/register.html:49 app/templates/layouts/base.html:118
+#: app/templates/main/terms.html:6
 msgid "წესები და პირობები"
 msgstr "Terms and Conditions"
 
-#: app/templates/main/index.html:25
+#: app/templates/auth/register.html:56
+msgid "უკვე გაქვთ პროფილი"
+msgstr "Don't have an account yet?"
+
+#: app/templates/auth/reset-password.html:8
+msgid "მიუთითეთ ელფოსტა"
+msgstr "Write your email"
+
+#: app/templates/auth/reset-password.html:13
+msgid "აღდგენა"
+msgstr "Reset Password"
+
+#: app/templates/layouts/base.html:36
+msgid "პოპულარული"
+msgstr "Popular"
+
+#: app/templates/layouts/base.html:37 app/templates/layouts/base.html:79
+msgid "კითხვები"
+msgstr "Questions"
+
+#: app/templates/layouts/base.html:45 app/templates/layouts/base.html:77
+#: app/templates/main/index.html:40
+msgid "მიტანის სერვისი"
+msgstr "Delivery Service"
+
+#: app/templates/layouts/base.html:46 app/templates/layouts/base.html:78
+msgid "კონტაქტი"
+msgstr "Contact"
+
+#: app/templates/layouts/base.html:74
+msgid "ავტორიზაცია"
+msgstr "Log in"
+
+#: app/templates/layouts/base.html:75
+msgid "ბაჭიები"
+msgstr "Bunnies"
+
+#: app/templates/layouts/base.html:76
+msgid "ცხოველები"
+msgstr "Animals"
+
+#: app/templates/layouts/base.html:85
+msgid "კალათა ცარიელია"
+msgstr "Basket is empty"
+
+#: app/templates/layouts/base.html:87
+msgid "აირჩიე ბაჭია"
+msgstr "Choose bunny"
+
+#: app/templates/layouts/base.html:88
+msgid "აირჩიე სხვა ცხოველი"
+msgstr "Choose other animal"
+
+#: app/templates/main/index.html:24
 msgid "პოპულარული სათამაშოები"
-msgstr "Popular toys"
+msgstr "Popular Toys"
 
-#: app/templates/main/index.html:34 app/templates/product/bunnies.html:19
-#: app/templates/product/product-page.html:22
+#: app/templates/main/index.html:32 app/templates/product/bunnies.html:24
+#: app/templates/product/product-page.html:30
 msgid "შეძენა"
-msgstr "Purchase"
+msgstr "Buy"
 
-#: app/templates/main/index.html:54
+#: app/templates/main/index.html:52
 msgid ""
 "თბილისში მიტანა შესაძლებელია შეკვეთიდან მეორე დღეს. მიტანის ღირებულება "
 "ცენტრალურ უბნებში 6 ლარი, ხოლო გარეუბნებში 8 ლარია."
-msgstr "It can be delivered to Tbilisi the next day after ordering. The cost of delivery is 6 GEL in the central areas, and 8 GEL in the suburbs."
+msgstr ""
+"We are delivering in Tbilisi on a second day from ordering. Delivery "
+"price in central parts of city is 6Gel and in outskirts - 8Gel."
 
-#: app/templates/main/index.html:55
+#: app/templates/main/index.html:53
 msgid ""
 "რეგიონებში სათამაშოები იგზავნება ფოსტით. გაგზავნის ღირებულება ქალაქებში "
 "10 ლარი, ხოლო სოფლებში 12 ლარია. ამანათის ჩამოსვლის დრო დამოკიდებულია "
 "რეგიონზე."
-msgstr "In regions, toys are sent by mail. The cost of sending is 10 GEL in cities, and 12 GEL in villages. Parcel arrival time depends on the region."
+msgstr ""
+"We are sending toys in regions by post. Delivery price for towns is 10Gel"
+" and for villages 12Gel. The time of delivery depends on the address."
 
-#: app/templates/product/product-page.html:18
+#: app/templates/main/questions.html:6
+msgid "ხშირად დასმული კითხვები"
+msgstr "Frequently Asked Questions"
+
+#: app/templates/main/questions.html:8
+msgid "სად ხართ ტერიტორიულად?"
+msgstr "Where are you located?"
+
+#: app/templates/main/questions.html:9
+msgid ""
+"ამჟამად ჩვენი მაღაზია მხოლოდ ონლაინ მუშაობს. სათამაშოებს თბილისში, სახლში"
+" ვამზადებთ და სასურველ ლოკაციებზე მიტანის სერვისით ვგზავნით."
+msgstr ""
+"Currently, our store works only online. We prepare the toys at home in "
+"Tbilisi and send them to desired locations with a delivery service."
+
+#: app/templates/main/questions.html:12
+msgid "რა მასალისაგან მზადდება სათამაშოები?"
+msgstr "What are the toys made of?"
+
+#: app/templates/main/questions.html:13
+msgid ""
+"სათამაშოებს ვამზადებთ ანტიალერგიული პლუშის ძაფებისაგან, ძირითადად "
+"Himalaya-ს ფირმის, რომელიც ერთ-ერთ ყველაზე ხარისხიან ძაფად მიიჩნევა. "
+"აღნიშნული ძაფები უსაფრთხოა თქვენი პატარებისათვის."
+msgstr ""
+"We make toys from anti-allergic plush yarns, mainly Himalaya, which is "
+"considered one of the highest quality yarn. These yarns are safe for "
+"children."
+
+#: app/templates/main/questions.html:16
+msgid "როგორ შევუკვეთო სათამაშო?"
+msgstr "How can I order a toy?"
+
+#: app/templates/main/questions.html:17
+msgid ""
+"შეკვეთის გასაფორმებლად შეგიძლიათ ჩვენი ვებგვერდი გამოიყენოთ. შეარჩიეთ "
+"სასურველი სათამაშო და დააჭირეთ ღილაკს შეძენა, შემდეგ კი გააფორმეთ "
+"შეკვეთა. ასევე შეგიძლიათ მოგვწეროთ ჩვენს ინსტაგრამზე ან ფეისბუქ გვერდზე."
+msgstr ""
+"You can use our website to place an order. Select the desired toy and "
+"click the buy button, then complete the order. You can also message us on"
+" our Instagram or Facebook page."
+
+#: app/templates/main/questions.html:20
+msgid "რა დრო დასჭირდება სათამაშოს დამზადებას?"
+msgstr "How long does it take to knit a toy?"
+
+#: app/templates/main/questions.html:21
+msgid ""
+"როგორც წესი, სათამაშოს დამზადებას 2-დან 5 დღემდე ვანდომებთ. თუმცა "
+"ზოგიერთი სათამაშო შესაძლოა თქვენ მიერ შეკვეთის გაფორმების მომენტში უკვე "
+"მარაგში იყოს და შესაბამისად ეს დრო არ დასჭირდეს."
+msgstr ""
+"Usually it takes 2 to 5 days to make a toy. However, some toys may "
+"already be in stock at the time you place your order, so it may not take "
+"that long."
+
+#: app/templates/main/questions.html:24
+msgid "როგორ მუშაობს მიტანის სერვისი?"
+msgstr "How does the delivery service work?"
+
+#: app/templates/main/questions.html:25
+msgid ""
+"შეკვეთის ვებგვერდზე გაფორმებისას შეგიძლიათ აირჩიოთ სასურველი მიტანის "
+"თარიღი მოცემული ვარიანტებიდან. საქმე იმაშია, რომ თითოეული სათამაშოს "
+"დამზადებას გარკვეული დრო სჭირდება. ეს დრო განსხვავებულია სათამაშოს ზომისა"
+" და სირთულის მიხედვით, საშუალოდ 2-5 დღე. როგორც კი სათამაშო დამზადდება, "
+"მიტანის სერვისი თბილისში მეორე დღესვე მოგიტანთ შეკვეთას. რეგიონებში კი "
+"საქართველოს ფოსტით ვგზავნით და ამ შემთხვევაში მოტანის შესაძლოა დაახლოებით"
+" 1 კვირა დასჭირდეს. თუკი რეგიონში გნებავთ, გთხოვთ წინასწარ დაგვეკონტაქტეთ"
+" ჩვენს ფეისბუქ ან ინსტაგრამ გვერდზე, რათა უფრო დეტალურად შეგატყობინოთ "
+"მოტანის ვადა."
+msgstr ""
+"When placing an order, you can select the desired delivery date from the "
+"given options. Each toy takes some time to make. This time varies "
+"depending on the size and complexity of the toy. As soon as the toy is "
+"made, the delivery service will bring your order in Tbilisi the next day."
+" In the regions, we send by Georgian post, and in this case, delivery may"
+" take about 1 week. In case you need delivery service to the regions of "
+"Georgia, please contact us in advance so that we can specify the details."
+
+#: app/templates/main/questions.html:28
+msgid "როგორ გადავიხადო შეკვეთის ღირებულება?"
+msgstr "How can I pay the order?"
+
+#: app/templates/main/questions.html:29
+msgid ""
+"შეკვეთის თანხის გადახდა, ვებგვერდზე შეკვეთის განთავსებისას, ვიზა ან "
+"მასტერქარდის საბანკო ბარათით არის შესაძლებელი. ასევე შეგიძლიათ "
+"გადმორიცხოთ ჩვენს თიბისი ან საქართველოს ბანკის ანგარიშზე, რა შემთხვევაშიც"
+" გთხოვთ დანიშნულებაში მიუთითეთ შეკვეთის ნომერი."
+msgstr ""
+"When placing the order on the website, payment is possible with a Visa or"
+" Mastercard. You can also transfer the amount to our TBC or Bank of "
+"Georgia account, in which case please specify the order number in the "
+"destination."
+
+#: app/templates/main/questions.html:32
+msgid "თანხის ხელზე გადახდა შესაძლებელია?"
+msgstr "Can I pay cash upon delivery?"
+
+#: app/templates/main/questions.html:33
+msgid ""
+"ამ ეტაპზე, სამწუხაროდ, საკუთარი კურიერი არ გვყავს, მიტანის სერვისს სხვა "
+"კომპანია უზრუნველყოფს, ამიტომ სათამაშოს თანხის ხელზე გადახდა შესაძლებელი "
+"არ არის. თუმცა შეგიძლიათ მიტანის სერვისის თანხა გადაუხადოთ ხელზე კურიერს,"
+" თუკი ასე გირჩევნიათ."
+msgstr ""
+"At this stage, unfortunately, we do not have our own courier, the "
+"delivery service is provided by another company, so it is not possible to"
+" pay for the toy upon delivery. However, you can pay the delivery fee to "
+"the courier if you prefer."
+
+#: app/templates/main/questions.html:36
+msgid "ინდივიდუალურ შეკვეთებს იღებთ?"
+msgstr "Do you get individual orders?"
+
+#: app/templates/main/questions.html:37
+msgid ""
+"ინდივიდუალური სათამაშოს შეკვეთა შესაძლებელია, იმ შემთხვევაში, თუკი "
+"შევძლებთ თქვენი სასურველი სათამაშოს სქემის მოპოვებას ან შექმნას. გთხოვთ "
+"წინასწარ, სასურველ თარიღამდე სულ მცირე 10 დღით ადრე დაგვიკავშირდეთ ჩვენს "
+"ინსტაგრამ ან ფეისბუქ გვერდზე და გვაჩვენოთ სასურველი სათამაშო, რა "
+"შემთხვევაშიც დაგიზუსტებთ რამდენად შეგვიძლია მისი მოქსოვა."
+msgstr ""
+"A custom toy can be ordered if we can obtain or create a scheme for your "
+"desired toy. Please contact us in advance, at least 10 days before the "
+"desired date, on our Instagram or Facebook page and show us the desired "
+"toy, in which case we will specify if we can knit it."
+
+#: app/templates/main/terms.html:9
+msgid ""
+"ეს წესები და პირობები არის იურიდიულად მავალდებულებელი შეთანხმება "
+"„ამიგურუმი თბილისსა“ (შემდგომში „მაღაზია“) და ყველა იმ მომხმარებელს "
+"შორის, რომელიც იძენს „მაღაზიაში“ სათამაშოს ან/და მომსახურებას (შემდგომში "
+"„მომხმარებელი“). "
+msgstr ""
+"These terms and conditions are a legally binding agreement between "
+"Amigurumi Tbilisi (hereinafter referred to as the 'Store') and all "
+"customers who purchase toys and/or services from the 'Store' (hereinafter"
+" referred to as the 'Customer')."
+
+#: app/templates/main/terms.html:12
+msgid ""
+"ამ ვებგვერდის გამოყენებით „მომხმარებელი“ ადასტურებს, რომ ეთანხმება "
+"წინამდებარე წესებსა და პირობებს."
+msgstr ""
+"The 'Customer' signifies their acceptance of these terms and conditions "
+"by using this website."
+
+#: app/templates/main/terms.html:15
+msgid "მუხლი 1"
+msgstr "Article 1"
+
+#: app/templates/main/terms.html:17
+msgid ""
+"„მაღაზიის“ ვებგვერდზე განთავსებული ლოგო, ფოტოები, პროდუქციის დიზაინი, "
+"აღწერა, სერვისები, სახელწოდება „ამიგურუმი თბილისი“ არის „მაღაზიის“ "
+"საკუთრება და დაცულია კანონით. ამრიგად, მისი გამოყენება „მომხმარებელს“ "
+"მხოლოდ პირადი მოხმარებისთვის შეუძლია და არ აქვს უფლება გადაამუშავოს, "
+"გადათარგმნოს, გაყიდოს ან/და ანაზღაურებადი მიზნებისთვის გამოიყენოს იგი."
+msgstr ""
+"The 'Store' is the rightful owner of the Logo, Photos, Product Design, "
+"Description, Services, and name 'Amigurumi Tbilisi' displayed on this "
+"website, and they are legally protected. As a result, the 'Customer' is "
+"only permitted to use it for personal use; processing, translating, "
+"selling, and/or using it for gainful employment are all prohibited."
+
+#: app/templates/main/terms.html:21
+msgid "მუხლი 2"
+msgstr "Article 2"
+
+#: app/templates/main/terms.html:23
+msgid ""
+"ამ ვებგვერდის გამოყენებით „მომხმარებელი“ ეთანხმება „მაღაზიისაგან“ მიიღოს "
+"მოკლე ტექსტური შეტყობინებები ტელეფონზე ან/და წერილები ელფოსტაზე, მის "
+"შეკვეთასთან დაკავშირებით."
+msgstr ""
+"The 'Customer' acknowledges and agrees that the 'Store' may contact them "
+"regarding their order via phone, email, and/or brief text messages."
+
+#: app/templates/main/terms.html:27
+msgid ""
+"ამ ვებგვერდზე რეგისტრაციის ან/და შეკვეთის განთავსების გზით „მაღაზიისთვის“"
+" გადმოცემული პერსონალური ინფორმაციის (შემდგომში „პერსონალური ინფორმაცია“)"
+" უსაფრთხოებაზე პასუხისმგებელია „მაღაზია“;"
+msgstr ""
+"The 'Store' is in charge of protecting the privacy of any personal data "
+"(hereafter referred to as 'Personal Information') that 'Customers' give "
+"us when registering and/or making purchases on this website;"
+
+#: app/templates/main/terms.html:30
+msgid ""
+"„მაღაზია“ უფლებამოსილია დაამუშავოს „პერსონალური ინფორმაცია“, გაუგზავნოს "
+"„პერსონალური ინფორმაციის“ მფლობელს სარეკლამო შეტყობინებები მობილურ "
+"ტელეფონზე და ელ-ფოსტაზე."
+msgstr ""
+"'Store' is permitted to process 'Personal Information' and to send email "
+"and mobile advertising messages to the owner of 'Personal information'."
+
+#: app/templates/main/terms.html:33
+msgid ""
+"„მაღაზია“ უფლებამოსილია დაამუშავოს „პერსონალური ინფორმაცია“ პერსონალურ "
+"მონაცემთა დაცვის შესახებ საქართველოს კანონის მიხედვით;"
+msgstr ""
+"In accordance with Georgian law governing the protection of personal "
+"data, 'Store' is permitted to process 'Personal Information'."
+
+#: app/templates/main/terms.html:36
+msgid ""
+"„მაღაზია“ უფლებას იტოვებს საქართველოს კანონმდებლობის მოთხოვნით ან/და "
+"სამართლებრივ დავებში საკუთარი ინტერესების დასაცავად, ან/და „მაღაზიის“ "
+"რეორგანიზაციის, შერწყმის ან გაყიდვის შედეგად გადასცეს „პერსონალური "
+"ინფორმაცია“ მესამე პირებს;"
+msgstr ""
+"'Store' reserves the right to disclose 'Personal information' to third "
+"parties in accordance with Georgian law, to defend its own rights in "
+"legal proceedings, or in the event of 'Store's' reorganization, merger, "
+"or sale;"
+
+#: app/templates/main/terms.html:39
+msgid "მუხლი 3"
+msgstr "Article 3"
+
+#: app/templates/main/terms.html:41
+msgid ""
+"„მომხმარებელი“ პასუხისმგებელია შეკვეთის განთავსებისას მის მიერ მოწოდებული"
+" ინფორმაციის სისწორეზე. ამ ინფორმაციაში ხარვეზის გამო არასწორად "
+"შესრულებულ შეკვეთაზე პასუხისმგებელია თავად „მომხმარებელი“ და არა "
+"„მაღაზია“;"
+msgstr ""
+"The 'Customer' is accountable for the accuracy of the data they wrote "
+"while placing the order. If an order is improperly executed as a result "
+"of an inaccuracy in this information, it is the 'Customer' and not the "
+"'Store' who is responsible;"
+
+#: app/templates/main/terms.html:45
+msgid ""
+"„მომხმარებელი“ უფლებამოსილია გააუქმოს შეკვეთა ამ შეკვეთის მიტანის "
+"თარიღამდე 1 (ერთი) კალენდარული დღით ადრე მაინც, თუმცა თუკი შეკვეთა ამ "
+"დროისთვის უკვე გამოგზავნილია „მაღაზიის“ მიერ, მაშინ „მომხმარებელს“ თანხა "
+"დაუბრუნდება შეკვეთის მიტანის და უკან დაბრუნების თანხის გამოკლებით, "
+"„მაღაზიის“ მიერ შეკვეთის უკან მიღებიდან 5 (ხუთი) სამუშაო დღის "
+"განმავლობაში."
+msgstr ""
+"The 'Customer' has the option to cancel the order up to 1 (one) calendar "
+"day prior to the date it is scheduled to be delivered; however, if the "
+"'Store' has already sent the order by this moment, the amount will be "
+"refunded to the 'Customer' less the cost of delivery and return, in 5 "
+"(five) working days."
+
+#: app/templates/main/terms.html:48
+msgid "მუხლი 4"
+msgstr "Article 4"
+
+#: app/templates/main/terms.html:50
+msgid ""
+"ამ წესებისა და პირობების შესრულების ადგილია „მაღაზიის“ იურიდიული "
+"მისამართი;"
+msgstr ""
+"The legal address of the 'Store' shall be the site of execution of these "
+"terms and conditions;"
+
+#: app/templates/main/terms.html:54
+msgid ""
+"ამ წესებისა და პირობების რომელიმე პუნქტის ან მუხლის ბათილობა დანარჩენი "
+"პუნქტებისა და მუხლების ბათილობას არ გამოიწვევს."
+msgstr ""
+"The invalidity of one or more provisions of these terms and conditions "
+"shall not affect the validity of the others that remain in effect."
+
+#: app/templates/product/product-page.html:26
 msgid "ღირებულება"
-msgstr "Cost"
+msgstr "Price"
 

@@ -18,16 +18,16 @@
             </div>
             <div class="product-description">
                 {% if session['locale'] == 'KA' %}
-                    <p>{{ toy.desc_eng }}</p>
+                    {{ desc_eng | safe }}
                 {% else %}
-                    <p>{{ toy.desc_geo }}</p>
+                    {{ desc_geo | safe }}
                 {% endif %}
                 <div class="buy">
                     <span id="price">{{_('ღირებულება')}}:</span>
                     <div>
                         <span>{{ toy.price }}₾</span>
                         <a id="buyA">
-                            <button class="add-to-cart" id="buyButton">{{_('შეძენა')}}</button>
+                            <button class="add-to-cart" id="buyButton" onclick="getInfo('{{toy.photo}}', '{{toy.price}}')">{{_('შეძენა')}}</button>
                         </a>
                     </div>
                 </div>

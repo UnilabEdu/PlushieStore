@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, session, url_for, redirect, request
+from flask import Blueprint, render_template, session, redirect, request
 from app.config import Config
 from os import path
 from app.models import ToyCategory, Toy
@@ -14,6 +14,16 @@ def home():
     return render_template("index.html", categories=categories, toys=toys)
 
 
+@main_blueprint.route("/terms")
+def terms():
+    return render_template("terms.html")
+
+
+@main_blueprint.route("/questions")
+def questions():
+    return render_template("questions.html")
+
+
 @main_blueprint.route("/change_ln")
 def change_language():
     if session['locale'] == 'EN':
@@ -23,3 +33,8 @@ def change_language():
 
     previous_url = request.referrer
     return redirect(previous_url)
+
+
+@main_blueprint.errorhandler(404)
+def page_not_found():
+    return render_template('error.html'), 404

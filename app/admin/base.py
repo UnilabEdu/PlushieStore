@@ -20,3 +20,6 @@ class CustomAdminIndexView(AdminIndexView):
     def inaccessible_callback(self, name, **kwargs):
         if not self.is_accessible():
             return redirect(url_for("main.home"))
+
+    def is_visible(self):
+        return False

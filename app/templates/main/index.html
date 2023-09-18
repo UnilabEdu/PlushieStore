@@ -1,10 +1,6 @@
 {% extends 'layouts/base.html' %}
 
-{% block animation %}
-<div class="animation">
-    <h1>Ami gurumi Tbilisi</h1>
-</div>
-{% endblock %}
+
 
 
 {% block main %}
@@ -14,14 +10,12 @@
             {% for category in categories %}
             <div class="category">
                 <a href="{{ url_for('product.category', category_id=category.id) }}">
-                    <img src="{{ url_for('static', filename='img/covers/' + category.photo) }}"
-                         alt="pink bunny toy">
+                    <img src="{{ url_for('static', filename='img/covers/' + category.photo) }}" alt="pink bunny toy">
                     {% if session['locale'] == 'KA' %}
-                    <h3>{{ category.name_eng }}</h3>
+                        <h3>{{ category.name_eng }}</h3>
                     {% else %}
-                    <h3>{{ category.name_geo }}</h3>
+                        <h3>{{ category.name_geo }}</h3>
                     {% endif %}
-
                 </a>
             </div>
             {% endfor %}
@@ -32,8 +26,7 @@
                 {% for toy in toys %}
                 <li class="product featured-toy">
                     <a id="featuredToy1" href="{{ url_for('product.view_product', id=toy.id) }}">
-                        <img src="{{ url_for('static', filename='img/products/' + toy.photo) }}"
-                             alt="{{ toy.name_eng }}">
+                        <img src="{{ url_for('static', filename='img/products/' + toy.photo) }}" alt="{{ toy.name_eng }}">
                         <div class="product-info">
                             <span>{{ toy.price }}₾</span>
                             <button id="buyButton1" type="submit">{{_('შეძენა')}}</button>

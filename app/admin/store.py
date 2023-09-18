@@ -3,6 +3,7 @@ from wtforms.fields import SelectField, TextAreaField
 from flask_admin.form.upload import ImageUploadField
 from flask_ckeditor.fields import CKEditorField
 from os import path
+from flask import Markup
 
 PAGE_SIZE = 10
 
@@ -65,21 +66,27 @@ class ToyView(SecureModelView):
         "is_popular": "ჩანს პოპულარულებში"
     }
     column_editable_list = ["is_popular"]
-    list_template = "admin/newlist.html"
-    create_template = "admin/newcreate.html"
-    edit_template = "admin/newedit.html"
-
+    column_formatters = dict(
+        photo=lambda v, c, m, p: Markup(f'<img src="/static/img/products/{m.photo}" width="50">')
+    )
+    column_filters = ["category", "photo", "name_geo",
+                      "name_eng", "desc_eng", "desc_geo",
+                      "price", "stock", "is_popular",
+                      "meta_geo", "meta_eng"
+                      ]
+    column_searchable_list = ["photo", "name_geo", "name_eng",
+                              "desc_eng", "desc_geo", "price",
+                              "stock", "meta_geo", "meta_eng"
+                              ]
 
     form_overrides = {"desc_eng": CKEditorField, "desc_geo": CKEditorField, "meta_eng": TextAreaField,
                       "meta_geo": TextAreaField, 'photo': ImageUploadField}
-
     form_args = {"photo": {"base_path": path.dirname("app/static/img/products/"),
-                           "url_relative_path": "img/products/"}}
-    column_filters = ["category", "photo", "name_geo", "name_eng", "desc_eng", "desc_geo", "price", "stock",
-                      "is_popular", "meta_geo", "meta_eng"]
+                           "url_relative_path": "/img/products/"}}
 
-    column_searchable_list = ["photo", "name_geo", "name_eng", "desc_eng", "desc_geo", "price", "stock",
-                              "meta_geo", "meta_eng"]
+    create_template = "admin/newcreate.html"
+    edit_template = "admin/newedit.html"
+
     page_size = PAGE_SIZE
 
 
